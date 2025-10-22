@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { modelVerifyListAtom } from "../../../../atoms/configState"
 import { showToastAtom } from "../../../../atoms/toastState"
 import CheckBox from "../../../../components/CheckBox"
-import Dropdown from "../../../../components/DropDown"
+import Dropdown, { DropDownOptionType } from "../../../../components/DropDown"
 import PopupConfirm from "../../../../components/PopupConfirm"
 import Tooltip from "../../../../components/Tooltip"
 import { useModelsProvider } from "../ModelsProvider"
@@ -21,6 +21,7 @@ import { isProviderIconNoFilter } from "../../../../atoms/interfaceState"
 import { systemThemeAtom, userThemeAtom } from "../../../../atoms/themeState"
 import Input from "../../../../components/Input"
 import Button from "../../../../components/Button"
+import { imgPrefix } from "../../../../ipc"
 
 type Props = {
   onClose: () => void
@@ -180,8 +181,8 @@ const ModelPopup = ({ onClose, onSuccess }: Props) => {
             checkComplete()
           }
 
-          svgImg.src = `/image/model_filter/model_${provider}.svg`
-          pngImg.src = `/image/model_filter/model_${provider}.png`
+          svgImg.src = `${imgPrefix}model_filter/model_${provider}.svg`
+          pngImg.src = `${imgPrefix}model_filter/model_${provider}.png`
         })
       }
 
@@ -535,12 +536,12 @@ const ModelPopup = ({ onClose, onSuccess }: Props) => {
     }
   }
 
-  const ModelMenu = (model: BaseModel) => {
+  const ModelMenu = (model: BaseModel): Record<string, { subOptions: DropDownOptionType[] }> => {
     const status = model.verifyStatus ?? "unVerified"
-    const menu = []
+    const menu: Record<string, { subOptions: DropDownOptionType[] }> = { "root": { subOptions: [] } }
 
     // advanced setting
-    menu.push({
+    menu["root"].subOptions.push({
       label: (
         <div className="model-option-verify-menu-item">
           <svg
@@ -578,7 +579,7 @@ const ModelPopup = ({ onClose, onSuccess }: Props) => {
     }
 
     // verify model
-    menu.push({
+    menu["root"].subOptions.push({
       label:
         <div className="model-option-verify-menu-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -598,7 +599,7 @@ const ModelPopup = ({ onClose, onSuccess }: Props) => {
 
     // ignore verify model
     if(status !== "ignore" && status !== "success"){
-      menu.push({
+      menu["root"].subOptions.push({
         label:
           <div className="model-option-verify-menu-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -619,7 +620,7 @@ const ModelPopup = ({ onClose, onSuccess }: Props) => {
 
     // delete custom model id
     if(model.isCustomModel){
-      menu.push({
+      menu["root"].subOptions.push({
         label:
           <div className="model-option-verify-menu-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -675,8 +676,8 @@ const ModelPopup = ({ onClose, onSuccess }: Props) => {
   // Helper function to get provider icon path
   const getProviderIconPath = (provider: string): { svg: string; png: string } => {
     return {
-      svg: `/image/model_filter/model_${provider}.svg`,
-      png: `/image/model_filter/model_${provider}.png`
+      svg: `${imgPrefix}model_filter/model_${provider}.svg`,
+      png: `${imgPrefix}model_filter/model_${provider}.png`
     }
   }
 
@@ -927,7 +928,7 @@ const ModelPopup = ({ onClose, onSuccess }: Props) => {
                         </div>
                         <div className="model-option-hint">
                           {verifyStatusNode(model)}
-                          {ModelMenu(model)?.length > 0 && model.verifyStatus !== "verifying" &&
+                          {ModelMenu(model).root.subOptions.length > 0 && model.verifyStatus !== "verifying" &&
                             <div className="model-option-verify-menu-wrapper">
                               {!isVerifying.current &&
                                 <Dropdown

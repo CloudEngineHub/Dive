@@ -45,11 +45,25 @@
     "toolCalls": "🛠 Resultado da Chamada da Ferramenta {{name}}",
     "unsupportTools": "{{model}} não suporta Chamadas de Ferramentas",
     "dragFiles": "Solte os arquivos aqui para adicionar ao chat",
+    "rateLimitExceededTitle": "Limite de chamadas de modelo atingido",
+    "rateLimitExceededDescription": "Aguarde antes de fazer novas solicitações; a cota será restaurada automaticamente.",
     "tools-btn": {
       "disableToast": "Chamadas de Ferramentas desativadas",
       "disable": "Desativar Chamadas de Ferramentas",
       "enableToast": "Chamadas de Ferramentas ativadas",
       "enable": "Ativar Chamadas de Ferramentas"
+    },
+    "tokens": {
+      "tooltip": "Contagem de tokens de entrada",
+      "model": "Model",
+      "input": "Entrada",
+      "output": "Saída",
+      "count": "Contagem de tokens",
+      "total": "Uso total",
+      "firstDelay": "Primeiro atraso {{time}} ms",
+      "firstDelayDesc": "Primeiro atraso: Tempo para a IA começar a gerar o primeiro caractere",
+      "generationRate": "{{time}} tokens por segundo",
+      "generationRateDesc": "Taxa de geração: Número de tokens que a IA pode gerar por segundo"
     }
   },
   "welcome": {
@@ -416,10 +430,8 @@
     "subscriptionDate": "Data de assinatura",
     "remainingUsage": "Uso restante",
     "usageWarningTitle": "Limite de uso de tokens atingido.",
-    "usageWarning": "A cota do plano Pro será reiniciada no próximo mês, ou compre pacotes de tokens para mais uso. Modelos Básicos e MCP ainda estão disponíveis.",
-    "BaseSubscriptionDate": "Nunca expira",
-    "BaseRemainingUsage": "Sem limite",
-    "BaseUsageWarning": "O plano Base inclui acesso a Modelos Básicos e MCPs Básicos. Para usar outros modelos e MCPs, por favor atualize seu plano na <planLink>Página do Plano</planLink>.",
+    "usageWarning": "A cota será redefinida no próximo mês, ou compre pacotes de tokens para mais uso. Modelos básicos e MCP básicos ainda disponíveis.",
+    "BaseUsageWarning": "Modelos Base: {{callLimit}} chamadas por {{callUnit}} horas | Servidores MCP Base: {{mcpLimit}} chamadas por hora. Para usar outros modelos e MCPs, atualize seu plano na <planLink>página de planos</planLink>.",
     "customPromptDescription": "Se você precisar de instruções personalizadas adicionais, por favor clique na função \"Prompt Personalizado\" abaixo para configurá-lo.",
     "customPromptButton": "Prompt Personalizado",
     "tokenPackageTitle": "Uso do pacote de tokens",
@@ -433,7 +445,8 @@
     "copiedToClipboard": "Copiado para a área de transferência",
     "copyFailed": "Falha ao copiar",
     "copiedImage": "Imagem Copiada",
-    "downloadedImage": "Imagem Baixada"
+    "downloadedImage": "Imagem Baixada",
+    "downloadedVideo": "Vídeo baixado"
   },
   "keymap": {
     "title": "Atalhos de Teclado",
@@ -476,6 +489,20 @@
   },
   "deeplink": {
     "mcpInstallConfirm": "Adicionar Serviço MCP stdio - Você adicionará MCP através do seguinte comando, por favor confirme:"
+  },
+  "videoPlayer": {
+    "play": "Reproduzir",
+    "pause": "Pausar",
+    "playbackSpeed": "Velocidade de reprodução",
+    "volume": "Volume",
+    "download": "Baixar",
+    "fullscreen": "Tela cheia",
+    "exitFullscreen": "Sair da tela cheia",
+    "hoykeys": {
+      "play": "Reproduzir<key>Espaço</key>ou<key>K</key>",
+      "pause": "Pausar<key>Espaço</key>ou<key>K</key>",
+      "exitFullscreen": "Sair da tela cheia<key>F</key>ou<key>Esc</key>"
+    }
   }
 }
 

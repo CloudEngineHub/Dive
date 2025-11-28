@@ -45,11 +45,25 @@
     "toolCalls": "🛠 {{name}} Araç Çağrısı Sonucu",
     "unsupportTools": "{{model}} Araç Çağrılarını desteklemiyor",
     "dragFiles": "Sohbete eklemek için dosyaları buraya bırakın",
+    "rateLimitExceededTitle": "Model çağrı limiti aşıldı",
+    "rateLimitExceededDescription": "Lütfen yeni isteklerde bulunmadan önce bekleyin; kota otomatik olarak geri yüklenecektir.",
     "tools-btn": {
       "disableToast": "Araç Çağrıları devre dışı bırakıldı",
       "disable": "Araç Çağrılarını Devre Dışı Bırak",
       "enableToast": "Araç Çağrıları etkinleştirildi",
       "enable": "Araç Çağrılarını Etkinleştir"
+    },
+    "tokens": {
+      "tooltip": "Giriş Token Sayısı",
+      "model": "Model",
+      "input": "Giriş",
+      "output": "Çıkış",
+      "count": "Token Sayısı",
+      "total": "Toplam Kullanım",
+      "firstDelay": "İlk gecikme {{time}} ms",
+      "firstDelayDesc": "İlk gecikme: AI'nın ilk karakteri oluşturmaya başlaması için geçen süre",
+      "generationRate": "Saniyede {{time}} token",
+      "generationRateDesc": "Üretim hızı: AI'nın saniyede üretebileceği token sayısı"
     }
   },
   "welcome": {
@@ -416,10 +430,8 @@
     "subscriptionDate": "Abonelik tarihi",
     "remainingUsage": "Kalan kullanım",
     "usageWarningTitle": "Jeton kullanım limiti ulaşıldı.",
-    "usageWarning": "Pro plan kotası gelecek ay sıfırlanır veya daha fazla kullanım için jeton paketleri satın alın. Temel Modeller ve MCP hala kullanılabilir.",
-    "BaseSubscriptionDate": "Asla sona ermez",
-    "BaseRemainingUsage": "Sınır yok",
-    "BaseUsageWarning": "Base planı Temel Modellere ve Temel MCP'lere erişim içerir. Diğer modelleri ve MCP'leri kullanmak için lütfen <planLink>Plan Sayfası</planLink>'ndan planınızı yükseltin.",
+    "usageWarning": "Kota gelecek ay sıfırlanır veya daha fazla kullanım için token paketleri satın alın. Temel modeller ve temel MCP hala kullanılabilir.",
+    "BaseUsageWarning": "Temel modeller: {{callLimit}} çağrı / {{callUnit}} saat | Temel MCP sunucuları: {{mcpLimit}} çağrı/saat. Diğer modelleri ve MCP'leri kullanmak için lütfen planınızı <planLink>plan sayfasından</planLink> yükseltin.",
     "customPromptDescription": "Ek özel talimatlara ihtiyacınız varsa, lütfen ayarlamak için aşağıdaki \"Özel İstem\" işlevine tıklayın.",
     "customPromptButton": "Özel İstem",
     "tokenPackageTitle": "Jeton paketi kullanımı",
@@ -433,7 +445,8 @@
     "copiedToClipboard": "Panoya kopyalandı",
     "copyFailed": "Kopyalama başarısız",
     "copiedImage": "Resim Kopyalandı",
-    "downloadedImage": "Resim İndirildi"
+    "downloadedImage": "Resim İndirildi",
+    "downloadedVideo": "Video İndirildi"
   },
   "keymap": {
     "title": "Klavye Kısayolları",
@@ -476,6 +489,24 @@
   },
   "deeplink": {
     "mcpInstallConfirm": "Stdio MCP Hizmetini Ekle - Aşağıdaki komut aracılığıyla MCP ekleyeceksiniz, lütfen onaylayın:"
+  },
+  "dropdown": {
+    "searchPlaceholder": "Ara",
+    "noSearchResultsText": "Sonuç bulunamadı"
+  },
+  "videoPlayer": {
+    "play": "Oynat",
+    "pause": "Duraklat",
+    "playbackSpeed": "Oynatma Hızı",
+    "volume": "Ses",
+    "download": "İndir",
+    "fullscreen": "Tam Ekran",
+    "exitFullscreen": "Tam Ekrandan Çık",
+    "hoykeys": {
+      "play": "Oynat <key>Boşluk</key> veya <key>k</key>",
+      "pause": "Duraklat <key>Boşluk</key> veya <key>k</key>",
+      "exitFullscreen": "Tam Ekrandan Çık <key>F</key> veya <key>Esc</key>"
+    }
   }
 }
 

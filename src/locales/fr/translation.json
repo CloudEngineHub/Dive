@@ -45,11 +45,25 @@
     "toolCalls": "🛠 Résultat de l'appel d'outil {{name}}",
     "unsupportTools": "{{model}} ne prend pas en charge les appels d'outils",
     "dragFiles": "Déposer les fichiers ici pour les ajouter au chat",
+    "rateLimitExceededTitle": "Limite d'appels de modèles atteinte",
+    "rateLimitExceededDescription": "Veuillez attendre avant de faire de nouvelles demandes; le quota sera restauré automatiquement.",
     "tools-btn": {
       "disableToast": "Appels d'outils désactivés",
       "disable": "Désactiver les appels d'outils",
       "enableToast": "Appels d'outils activés",
       "enable": "Activer les appels d'outils"
+    },
+    "tokens": {
+      "tooltip": "Nombre de tokens d'entrée",
+      "model": "Model",
+      "input": "Entrée",
+      "output": "Sortie",
+      "count": "Nombre de tokens",
+      "total": "Utilisation totale",
+      "firstDelay": "Premier délai {{time}} ms",
+      "firstDelayDesc": "Premier délai : Temps pour que l'IA commence à générer le premier caractère",
+      "generationRate": "{{time}} tokens par seconde",
+      "generationRateDesc": "Taux de génération : Nombre de tokens que l'IA peut générer par seconde"
     }
   },
   "welcome": {
@@ -416,10 +430,8 @@
     "subscriptionDate": "Date d'abonnement",
     "remainingUsage": "Utilisation restante",
     "usageWarningTitle": "Limite d'utilisation de jetons atteinte.",
-    "usageWarning": "Le quota du plan Pro se réinitialise le mois prochain, ou achetez des packages de jetons pour plus d'utilisation. Les modèles de base et MCP sont toujours disponibles.",
-    "BaseSubscriptionDate": "N'expire jamais",
-    "BaseRemainingUsage": "Aucune limite",
-    "BaseUsageWarning": "Le plan Base comprend l'accès aux modèles de base et aux MCP de base. Pour utiliser d'autres modèles et MCP, veuillez mettre à niveau votre plan depuis la <planLink>page Plan</planLink>.",
+    "usageWarning": "Le quota se réinitialise le mois prochain, ou achetez des forfaits de jetons pour plus d'utilisation. Les modèles de base et MCP de base restent disponibles.",
+    "BaseUsageWarning": "Modèles de base: {{callLimit}} appels par {{callUnit}} heures | Serveurs MCP de base: {{mcpLimit}} appels par heure. Pour utiliser d'autres modèles et MCP, veuillez mettre à niveau votre plan depuis la <planLink>page des plans</planLink>.",
     "customPromptDescription": "Si vous avez besoin d'instructions personnalisées supplémentaires, veuillez cliquer sur la fonction \"Invite personnalisée\" ci-dessous pour la configurer.",
     "customPromptButton": "Invite personnalisée",
     "tokenPackageTitle": "Utilisation du package de jetons",
@@ -433,7 +445,8 @@
     "copiedToClipboard": "Copié dans le presse-papiers",
     "copyFailed": "Échec de la copie",
     "copiedImage": "Image copiée",
-    "downloadedImage": "Image téléchargée"
+    "downloadedImage": "Image téléchargée",
+    "downloadedVideo": "Vidéo téléchargée"
   },
   "keymap": {
     "title": "Raccourcis clavier",
@@ -476,6 +489,20 @@
   },
   "deeplink": {
     "mcpInstallConfirm": "Ajouter le service MCP stdio - Vous ajouterez MCP via la commande suivante, veuillez confirmer :"
+  },
+  "videoPlayer": {
+    "play": "Lecture",
+    "pause": "Pause",
+    "playbackSpeed": "Vitesse de lecture",
+    "volume": "Volume",
+    "download": "Télécharger",
+    "fullscreen": "Plein écran",
+    "exitFullscreen": "Quitter le plein écran",
+    "hoykeys": {
+      "play": "Lecture<key>Espace</key>ou<key>K</key>",
+      "pause": "Pause<key>Espace</key>ou<key>K</key>",
+      "exitFullscreen": "Quitter le plein écran<key>F</key>ou<key>Esc</key>"
+    }
   }
 }
 

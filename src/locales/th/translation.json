@@ -45,11 +45,25 @@
     "toolCalls": "🛠 ผลลัพธ์การเรียกเครื่องมือ {{name}}",
     "unsupportTools": "{{model}} ไม่รองรับการเรียกเครื่องมือ",
     "dragFiles": "วางไฟล์ที่นี่เพื่อเพิ่มในแชท",
+    "rateLimitExceededTitle": "ถึงขีดจำกัดการเรียกโมเดล",
+    "rateLimitExceededDescription": "โปรดรอก่อนทำคำขอใหม่ โควต้าจะถูกกู้คืนโดยอัตโนมัติ",
     "tools-btn": {
       "disableToast": "ปิดการเรียกเครื่องมือแล้ว",
       "disable": "ปิดการเรียกเครื่องมือ",
       "enableToast": "เปิดการเรียกเครื่องมือแล้ว",
       "enable": "เปิดการเรียกเครื่องมือ"
+    },
+    "tokens": {
+      "tooltip": "จำนวนโทเค็นอินพุต",
+      "model": "Model",
+      "input": "อินพุต",
+      "output": "เอาต์พุต",
+      "count": "จำนวนโทเค็น",
+      "total": "การใช้งานทั้งหมด",
+      "firstDelay": "ความล่าช้าครั้งแรก {{time}} ms",
+      "firstDelayDesc": "ความล่าช้าครั้งแรก: เวลาที่ AI ใช้ในการเริ่มสร้างอักขระแรก",
+      "generationRate": "{{time}} โทเค็นต่อวินาที",
+      "generationRateDesc": "อัตราการสร้าง: จำนวนโทเค็นที่ AI สามารถสร้างได้ต่อวินาที"
     }
   },
   "welcome": {
@@ -416,10 +430,8 @@
     "subscriptionDate": "วันที่สมัครสมาชิก",
     "remainingUsage": "การใช้งานที่เหลือ",
     "usageWarningTitle": "ถึงขีดจำกัดการใช้งานโทเค็นแล้ว",
-    "usageWarning": "โควต้าแผน Pro จะรีเซ็ตเดือนหน้า หรือซื้อแพ็คเกจโทเค็นเพื่อการใช้งานเพิ่มเติม โมเดลพื้นฐานและ MCP ยังคงใช้งานได้",
-    "BaseSubscriptionDate": "ไม่มีวันหมดอายุ",
-    "BaseRemainingUsage": "ไม่มีขีดจำกัด",
-    "BaseUsageWarning": "แผน Base รวมการเข้าถึงโมเดลพื้นฐานและ MCP พื้นฐาน หากต้องการใช้โมเดลและ MCP อื่นๆ กรุณาอัปเกรดแผนของคุณจาก<planLink>หน้าแผน</planLink>",
+    "usageWarning": "โควต้าจะรีเซ็ตในเดือนหน้า หรือซื้อแพ็คเกจโทเค็นเพื่อการใช้งานเพิ่มเติม โมเดลพื้นฐานและ MCP พื้นฐานยังใช้งานได้",
+    "BaseUsageWarning": "โมเดล Base: {{callLimit}} ครั้ง / {{callUnit}} ชั่วโมง | เซิร์ฟเวอร์ MCP Base: {{mcpLimit}} ครั้ง/ชั่วโมง หากต้องการใช้โมเดลและ MCP อื่นๆ โปรดอัปเกรดแผนของคุณจาก <planLink>หน้าแผน</planLink>",
     "customPromptDescription": "หากคุณต้องการคำแนะนำกำหนดเองเพิ่มเติม กรุณาคลิกฟังก์ชัน \"พรอมต์กำหนดเอง\" ด้านล่างเพื่อตั้งค่า",
     "customPromptButton": "พรอมต์กำหนดเอง",
     "tokenPackageTitle": "การใช้งานแพ็คเกจโทเค็น",
@@ -433,7 +445,8 @@
     "copiedToClipboard": "คัดลอกไปยังคลิปบอร์ดแล้ว",
     "copyFailed": "การคัดลอกล้มเหลว",
     "copiedImage": "คัดลอกภาพแล้ว",
-    "downloadedImage": "ดาวน์โหลดภาพแล้ว"
+    "downloadedImage": "ดาวน์โหลดภาพแล้ว",
+    "downloadedVideo": "ดาวน์โหลดวิดีโอแล้ว"
   },
   "keymap": {
     "title": "ปุ่มลัดคีย์บอร์ด",
@@ -476,6 +489,20 @@
   },
   "deeplink": {
     "mcpInstallConfirm": "เพิ่มบริการ MCP stdio - คุณจะเพิ่ม MCP ผ่านคำสั่งต่อไปนี้ กรุณายืนยัน:"
+  },
+  "videoPlayer": {
+    "play": "เล่น",
+    "pause": "หยุดชั่วคราว",
+    "playbackSpeed": "ความเร็วในการเล่น",
+    "volume": "ระดับเสียง",
+    "download": "ดาวน์โหลด",
+    "fullscreen": "เต็มหน้าจอ",
+    "exitFullscreen": "ออกจากเต็มหน้าจอ",
+    "hoykeys": {
+      "play": "เล่น<key>Space</key>หรือ<key>K</key>",
+      "pause": "หยุดชั่วคราว<key>Space</key>หรือ<key>K</key>",
+      "exitFullscreen": "ออกจากเต็มหน้าจอ<key>F</key>หรือ<key>Esc</key>"
+    }
   }
 }
 

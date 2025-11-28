@@ -45,11 +45,25 @@
     "toolCalls": "🛠 {{name}} Werkzeugaufruf-Ergebnis",
     "unsupportTools": "{{model}} unterstützt keine Werkzeugaufrufe",
     "dragFiles": "Dateien hier ablegen, um sie zum Chat hinzuzufügen",
+    "rateLimitExceededTitle": "Modellabruflimit erreicht",
+    "rateLimitExceededDescription": "Bitte warten Sie, bevor Sie neue Anfragen stellen; das Kontingent wird automatisch wiederhergestellt.",
     "tools-btn": {
       "disableToast": "Werkzeugaufrufe deaktiviert",
       "disable": "Werkzeugaufrufe deaktivieren",
       "enableToast": "Werkzeugaufrufe aktiviert",
       "enable": "Werkzeugaufrufe aktivieren"
+    },
+    "tokens": {
+      "tooltip": "Eingabe-Token-Anzahl",
+      "model": "Model",
+      "input": "Eingabe",
+      "output": "Ausgabe",
+      "count": "Token-Anzahl",
+      "total": "Gesamtnutzung",
+      "firstDelay": "Erste Verzögerung {{time}} ms",
+      "firstDelayDesc": "Erste Verzögerung: Zeit bis die KI das erste Zeichen generiert",
+      "generationRate": "{{time}} Tokens pro Sekunde",
+      "generationRateDesc": "Generierungsrate: Anzahl der Tokens, die die KI pro Sekunde generieren kann"
     }
   },
   "welcome": {
@@ -416,10 +430,8 @@
     "subscriptionDate": "Abonnementdatum",
     "remainingUsage": "Verbleibende Nutzung",
     "usageWarningTitle": "Token-Nutzungslimit erreicht.",
-    "usageWarning": "Das Pro-Plan-Kontingent wird nächsten Monat zurückgesetzt, oder kaufen Sie Token-Pakete für mehr Nutzung. Basismodelle und MCP sind weiterhin verfügbar.",
-    "BaseSubscriptionDate": "Läuft nie ab",
-    "BaseRemainingUsage": "Keine Begrenzung",
-    "BaseUsageWarning": "Der Base-Plan umfasst den Zugriff auf Basismodelle und Basis-MCPs. Um andere Modelle und MCPs zu verwenden, aktualisieren Sie bitte Ihren Plan von der <planLink>Plan-Seite</planLink>.",
+    "usageWarning": "Das Kontingent wird nächsten Monat zurückgesetzt, oder kaufen Sie Token-Pakete für mehr Nutzung. Basismodelle und Basis-MCP sind weiterhin verfügbar.",
+    "BaseUsageWarning": "Base-Modelle: {{callLimit}} Aufrufe pro {{callUnit}} Stunden | Base-MCP-Server: {{mcpLimit}} Aufrufe pro Stunde. Um andere Modelle und MCPs zu verwenden, aktualisieren Sie bitte Ihren Plan von der <planLink>Plan-Seite</planLink>.",
     "customPromptDescription": "Wenn Sie zusätzliche benutzerdefinierte Anweisungen benötigen, klicken Sie bitte auf die Funktion \"Benutzerdefinierte Eingabeaufforderung\" unten, um sie einzurichten.",
     "customPromptButton": "Benutzerdefinierte Eingabeaufforderung",
     "tokenPackageTitle": "Token-Paketnutzung",
@@ -433,7 +445,8 @@
     "copiedToClipboard": "In Zwischenablage kopiert",
     "copyFailed": "Kopieren fehlgeschlagen",
     "copiedImage": "Bild kopiert",
-    "downloadedImage": "Bild heruntergeladen"
+    "downloadedImage": "Bild heruntergeladen",
+    "downloadedVideo": "Video heruntergeladen"
   },
   "keymap": {
     "title": "Tastenkombinationen",
@@ -476,6 +489,20 @@
   },
   "deeplink": {
     "mcpInstallConfirm": "Stdio MCP-Dienst hinzufügen - Sie werden MCP über den folgenden Befehl hinzufügen, bitte bestätigen:"
+  },
+  "videoPlayer": {
+    "play": "Abspielen",
+    "pause": "Pause",
+    "playbackSpeed": "Wiedergabegeschwindigkeit",
+    "volume": "Lautstärke",
+    "download": "Herunterladen",
+    "fullscreen": "Vollbild",
+    "exitFullscreen": "Vollbild beenden",
+    "hoykeys": {
+      "play": "Abspielen<key>Leertaste</key>oder<key>K</key>",
+      "pause": "Pause<key>Leertaste</key>oder<key>K</key>",
+      "exitFullscreen": "Vollbild beenden<key>F</key>oder<key>Esc</key>"
+    }
   }
 }
 

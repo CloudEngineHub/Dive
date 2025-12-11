@@ -127,6 +127,10 @@
     "saveSuccess": "Einstellungen erfolgreich gespeichert",
     "saveFailed": "Fehler beim Speichern der Einstellungen",
     "toggleFailed": "Ein Fehler ist aufgetreten",
+    "subTitle": {
+      "startFailed": "Start fehlgeschlagen, Fehler aufgetreten",
+      "notAuthorized": "Start fehlgeschlagen, Nicht verbunden"
+    },
     "reloadFailed": "{{toolName}} ist ein Fehler aufgetreten, Neuladen fehlgeschlagen",
     "reloadAllFailed": "{{number}} Werkzeugaufrufe sind ein Fehler aufgetreten, Neuladen fehlgeschlagen",
     "openConfigFolder": "Konfigurationsordner",
@@ -137,7 +141,10 @@
     "invalidJson": "Ungültiges JSON-Format",
     "updateFailed": "{{serverName}} Fehler beim Laden: {{error}}",
     "installFailed": "Installation fehlgeschlagen",
-    "startFailed": "Start fehlgeschlagen",
+    "failTooltip": {
+      "commandNotFound": "Wir haben festgestellt, dass der Befehl {{command}} in Ihrem \"{{name}}\"-System fehlt, der für die Ausführung dieses Werkzeugs erforderlich ist.",
+      "startFailed": "Beim Ausführen des MCP-Werkzeugs ist ein Fehler aufgetreten"
+    },
     "toolMenu": {
       "delete": "Löschen",
       "edit": "Bearbeiten",
@@ -439,7 +446,11 @@
     "tokenPackageRemainingUsage": "Verbleibende Nutzung",
     "tokenPackageWarningTitle": "Token-Kontingent aufgebraucht.",
     "tokenPackageWarning": "Sie können mehr Token-Nutzung auf der OAPhub <planLink>Dashboard-Seite</planLink> auffüllen.",
-    "skipTlsVerifyWarning": "Sicherheitswarnung: Das Ignorieren der Zertifikatsverifizierung kann die Verbindungssicherheit verringern. Es wird empfohlen, dies in vertrauenswürdigen Netzwerkumgebungen zu verwenden."
+    "skipTlsVerifyWarning": "Sicherheitswarnung: Das Ignorieren der Zertifikatsverifizierung kann die Verbindungssicherheit verringern. Es wird empfohlen, dies in vertrauenswürdigen Netzwerkumgebungen zu verwenden.",
+    "allRateLimitReachedTitle": "Modelle & MCP-Server Aufruf-Limit erreicht.",
+    "llmRateLimitReachedTitle": "Modelle Aufruf-Limit erreicht.",
+    "mcpRateLimitReachedTitle": "MCP-Server Aufruf-Limit erreicht.",
+    "rateLimitReachedDescription": "Bitte warten Sie, bevor Sie neue Anfragen stellen; das Kontingent wird automatisch wiederhergestellt."
   },
   "toast": {
     "copiedToClipboard": "In Zwischenablage kopiert",
@@ -455,6 +466,7 @@
       "chat-input_upload-file": "Datei hochladen",
       "chat-input_focus": "Cursor im Eingabefeld anzeigen und direkt schreiben",
       "chat-input_paste-last-message": "Letzte Nachricht einfügen",
+      "chat-input_history-up": "Vorherige Eingabe",
       "chat-message_copy-last": "Letzte Nachricht kopieren",
       "chat_delete": "Chat löschen",
       "global_new-chat": "Neuer Chat",
@@ -463,6 +475,7 @@
       "global_toggle-keymap-modal": "Tastenkombinations-Hilfe umschalten",
       "global_rename-chat": "Chat umbenennen",
       "global_setting-page": "Verwaltung und Einstellungen öffnen",
+      "global_close-window": "Beenden/Minimieren",
       "global_reload": "Fenster neu laden"
     }
   },

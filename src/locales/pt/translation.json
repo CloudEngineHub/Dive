@@ -127,6 +127,10 @@
     "saveSuccess": "Configurações salvas com sucesso",
     "saveFailed": "Falha ao salvar as configurações",
     "toggleFailed": "Ocorreu um erro",
+    "subTitle": {
+      "startFailed": "Falha ao iniciar, ocorreu um erro",
+      "notAuthorized": "Falha ao iniciar, Não conectado"
+    },
     "reloadFailed": "{{toolName}} ocorreu um erro, falha ao recarregar",
     "reloadAllFailed": "{{number}} chamadas de ferramentas ocorreram um erro, falha ao recarregar",
     "openConfigFolder": "Pasta de Configuração",
@@ -137,7 +141,10 @@
     "invalidJson": "Formato JSON inválido",
     "updateFailed": "{{serverName}} falhou ao carregar: {{error}}",
     "installFailed": "Falha na instalação",
-    "startFailed": "Falha ao iniciar",
+    "failTooltip": {
+      "commandNotFound": "Detectamos que o comando {{command}} está faltando no seu sistema \"{{name}}\", que é necessário para executar esta ferramenta.",
+      "startFailed": "Ocorreu um erro ao executar a ferramenta MCP"
+    },
     "toolMenu": {
       "delete": "Excluir",
       "edit": "Editar",
@@ -439,7 +446,11 @@
     "tokenPackageRemainingUsage": "Uso restante",
     "tokenPackageWarningTitle": "Cota de tokens esgotada.",
     "tokenPackageWarning": "Você pode reabastecer mais uso de tokens no OAPhub <planLink>página do Dashboard</planLink>.",
-    "skipTlsVerifyWarning": "Aviso de segurança: Ignorar a verificação de certificado pode reduzir a segurança da conexão. É recomendado usar em ambientes de rede confiáveis."
+    "skipTlsVerifyWarning": "Aviso de segurança: Ignorar a verificação de certificado pode reduzir a segurança da conexão. É recomendado usar em ambientes de rede confiáveis.",
+    "allRateLimitReachedTitle": "Limite de chamadas de modelos e servidores MCP atingido.",
+    "llmRateLimitReachedTitle": "Limite de chamadas de modelos atingido.",
+    "mcpRateLimitReachedTitle": "Limite de chamadas de servidores MCP atingido.",
+    "rateLimitReachedDescription": "Por favor aguarde antes de fazer novas solicitações; a cota será restaurada automaticamente."
   },
   "toast": {
     "copiedToClipboard": "Copiado para a área de transferência",
@@ -455,6 +466,7 @@
       "chat-input_upload-file": "Enviar Arquivo",
       "chat-input_focus": "Mostrar cursor no campo de entrada e escrever diretamente",
       "chat-input_paste-last-message": "Colar Última Mensagem",
+      "chat-input_history-up": "Entrada Anterior",
       "chat-message_copy-last": "Copiar Última Mensagem",
       "chat_delete": "Excluir Conversa",
       "global_new-chat": "Nova Conversa",
@@ -463,6 +475,7 @@
       "global_toggle-keymap-modal": "Alternar Ajuda de Atalho de Teclado",
       "global_rename-chat": "Renomear Conversa",
       "global_setting-page": "Abrir gerenciamento e configurações",
+      "global_close-window": "Sair/Minimizar Janela",
       "global_reload": "Recarregar Janela"
     }
   },

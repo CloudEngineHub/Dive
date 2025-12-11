@@ -303,6 +303,7 @@ pub fn run() {
             command::set_host,
             command::save_clipboard_image_to_cache,
             command::get_client_info,
+            command::check_command_exist,
             command::get_mime_type,
             // llm
             command::llm::llm_openai_model_list,
@@ -329,6 +330,7 @@ pub fn run() {
             command::oap::open_oap_login_page,
             command::oap::oap_get_token,
             command::oap::oap_get_model_description,
+            command::oap::oap_limiter_check,
         ])
         .append_invoke_initialization_script(include_str!("../../shared/preload.js"))
         .build(tauri::generate_context!());

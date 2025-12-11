@@ -127,6 +127,10 @@
     "saveSuccess": "Impostazioni salvate con successo",
     "saveFailed": "Salvataggio delle impostazioni fallito",
     "toggleFailed": "Si è verificato un errore",
+    "subTitle": {
+      "startFailed": "Avvio fallito, si è verificato un errore",
+      "notAuthorized": "Avvio fallito, Non connesso"
+    },
     "reloadFailed": "{{toolName}} si è verificato un errore, ricaricamento fallito",
     "reloadAllFailed": "{{number}} chiamate agli strumenti si è verificato un errore, ricaricamento fallito",
     "openConfigFolder": "Cartella di configurazione",
@@ -137,7 +141,10 @@
     "invalidJson": "Formato JSON non valido",
     "updateFailed": "{{serverName}} caricamento fallito: {{error}}",
     "installFailed": "Installazione fallita",
-    "startFailed": "Avvio fallito",
+    "failTooltip": {
+      "commandNotFound": "Abbiamo rilevato che il comando {{command}} manca dal tuo sistema \"{{name}}\", che è necessario per eseguire questo strumento.",
+      "startFailed": "Si è verificato un errore durante l'esecuzione dello strumento MCP"
+    },
     "toolMenu": {
       "delete": "Elimina",
       "edit": "Modifica",
@@ -439,7 +446,11 @@
     "tokenPackageRemainingUsage": "Utilizzo rimanente",
     "tokenPackageWarningTitle": "Quota token esaurita.",
     "tokenPackageWarning": "Puoi ricaricare più utilizzo token alla <planLink>pagina Dashboard</planLink> di OAPhub.",
-    "skipTlsVerifyWarning": "Avviso di sicurezza: Ignorare la verifica del certificato può ridurre la sicurezza della connessione. Si consiglia di utilizzare in ambienti di rete affidabili."
+    "skipTlsVerifyWarning": "Avviso di sicurezza: Ignorare la verifica del certificato può ridurre la sicurezza della connessione. Si consiglia di utilizzare in ambienti di rete affidabili.",
+    "allRateLimitReachedTitle": "Limite chiamate modelli e server MCP raggiunto.",
+    "llmRateLimitReachedTitle": "Limite chiamate modelli raggiunto.",
+    "mcpRateLimitReachedTitle": "Limite chiamate server MCP raggiunto.",
+    "rateLimitReachedDescription": "Attendere prima di effettuare nuove richieste; la quota verrà ripristinata automaticamente."
   },
   "toast": {
     "copiedToClipboard": "Copiato negli appunti",
@@ -455,6 +466,7 @@
       "chat-input_upload-file": "Carica file",
       "chat-input_focus": "Mostra cursore nel campo di input e scrivi direttamente",
       "chat-input_paste-last-message": "Incolla ultimo messaggio",
+      "chat-input_history-up": "Input precedente",
       "chat-message_copy-last": "Copia ultimo messaggio",
       "chat_delete": "Elimina chat",
       "global_new-chat": "Nuova chat",
@@ -463,6 +475,7 @@
       "global_toggle-keymap-modal": "Attiva/disattiva guida scorciatoie da tastiera",
       "global_rename-chat": "Rinomina chat",
       "global_setting-page": "Apri gestione e impostazioni",
+      "global_close-window": "Esci/Riduci finestra",
       "global_reload": "Ricarica finestra"
     }
   },

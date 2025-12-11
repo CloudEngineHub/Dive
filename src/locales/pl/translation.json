@@ -127,6 +127,10 @@
     "saveSuccess": "Ustawienia zapisane pomyślnie",
     "saveFailed": "Zapisywanie ustawień nie powiodło się",
     "toggleFailed": "Wystąpił błąd",
+    "subTitle": {
+      "startFailed": "Uruchomienie nie powiodło się, wystąpił błąd",
+      "notAuthorized": "Uruchomienie nie powiodło się, Nie połączono"
+    },
     "reloadFailed": "{{toolName}} wystąpił błąd, ponowne ładowanie nie powiodło się",
     "reloadAllFailed": "{{number}} wywołań narzędzi wystąpił błąd, ponowne ładowanie nie powiodło się",
     "openConfigFolder": "Folder konfiguracji",
@@ -137,7 +141,10 @@
     "invalidJson": "Nieprawidłowy format JSON",
     "updateFailed": "{{serverName}} ładowanie nie powiodło się: {{error}}",
     "installFailed": "Instalacja nie powiodła się",
-    "startFailed": "Uruchomienie nie powiodło się",
+    "failTooltip": {
+      "commandNotFound": "Wykryliśmy, że polecenie {{command}} brakuje w systemie \"{{name}}\", które jest wymagane do uruchomienia tego narzędzia.",
+      "startFailed": "Wystąpił błąd podczas uruchamiania narzędzia MCP"
+    },
     "toolMenu": {
       "delete": "Usuń",
       "edit": "Edytuj",
@@ -439,7 +446,11 @@
     "tokenPackageRemainingUsage": "Pozostałe użycie",
     "tokenPackageWarningTitle": "Limit tokenów wyczerpany.",
     "tokenPackageWarning": "Możesz uzupełnić więcej użycia tokenów na <planLink>stronie Dashboard</planLink> OAPhub.",
-    "skipTlsVerifyWarning": "Ostrzeżenie bezpieczeństwa: Ignorowanie weryfikacji certyfikatu może zmniejszyć bezpieczeństwo połączenia. Zaleca się użycie w zaufanych środowiskach sieciowych."
+    "skipTlsVerifyWarning": "Ostrzeżenie bezpieczeństwa: Ignorowanie weryfikacji certyfikatu może zmniejszyć bezpieczeństwo połączenia. Zaleca się użycie w zaufanych środowiskach sieciowych.",
+    "allRateLimitReachedTitle": "Osiągnięto limit wywołań modeli i serwerów MCP.",
+    "llmRateLimitReachedTitle": "Osiągnięto limit wywołań modeli.",
+    "mcpRateLimitReachedTitle": "Osiągnięto limit wywołań serwerów MCP.",
+    "rateLimitReachedDescription": "Proszę poczekać przed wykonaniem nowych żądań; limit zostanie automatycznie przywrócony."
   },
   "toast": {
     "copiedToClipboard": "Skopiowano do schowka",
@@ -455,6 +466,7 @@
       "chat-input_upload-file": "Prześlij plik",
       "chat-input_focus": "Pokaż kursor w polu wprowadzania i wpisz bezpośrednio",
       "chat-input_paste-last-message": "Wklej ostatnią wiadomość",
+      "chat-input_history-up": "Poprzednie wprowadzenie",
       "chat-message_copy-last": "Kopiuj ostatnią wiadomość",
       "chat_delete": "Usuń czat",
       "global_new-chat": "Nowy czat",
@@ -463,6 +475,7 @@
       "global_toggle-keymap-modal": "Przełącz pomoc skrótów klawiszowych",
       "global_rename-chat": "Zmień nazwę czatu",
       "global_setting-page": "Otwórz zarządzanie i ustawienia",
+      "global_close-window": "Zakończ/Minimalizuj okno",
       "global_reload": "Przeładuj okno"
     }
   },

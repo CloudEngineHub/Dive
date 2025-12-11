@@ -78,6 +78,7 @@ export type OAPSubscription = {
   StartDate: string
   Start: string
   End: string
+  PlanTokenPriceUnit: number
 }
 
 export type OAPUsage = {
@@ -94,4 +95,25 @@ export type OAPCoupon = {
   mcp: number
   total: number
   limit: number
+}
+
+export type OAPLimiterCheckParam = {
+  /** User id */
+  u: number
+  /** Subscription Level: 0 = BASE, 1 = PRO */
+  s: 0 | 1
+  /** Out of Token */
+  o: boolean
+  /** Resource Type: 0 = LLM, 1 = MCP */
+  r: 0 | 1
+  /** Billing Type: 0 = FREE, 1 = PAID */
+  /** always set to 0 */
+  b: 0
+}
+
+export type OAPLimiterCheck = {
+  /** PERMITED */
+  p: boolean
+  /** Call timeout duration (in seconds). */
+  t: number
 }

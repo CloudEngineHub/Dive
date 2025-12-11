@@ -127,6 +127,10 @@
     "saveSuccess": "Asetukset tallennettu onnistuneesti",
     "saveFailed": "Asetusten tallennus epäonnistui",
     "toggleFailed": "Virhe tapahtui",
+    "subTitle": {
+      "startFailed": "Käynnistys epäonnistui, virhe tapahtui",
+      "notAuthorized": "Käynnistys epäonnistui, Ei yhdistetty"
+    },
     "reloadFailed": "{{toolName}} tapahtui virhe, uudelleenlataus epäonnistui",
     "reloadAllFailed": "{{number}} työkalukutsua tapahtui virhe, uudelleenlataus epäonnistui",
     "openConfigFolder": "Määrityskansio",
@@ -137,7 +141,10 @@
     "invalidJson": "Virheellinen JSON-muoto",
     "updateFailed": "{{serverName}} lataus epäonnistui: {{error}}",
     "installFailed": "Asennus epäonnistui",
-    "startFailed": "Käynnistys epäonnistui",
+    "failTooltip": {
+      "commandNotFound": "Havaitsimme, että {{command}}-komento puuttuu järjestelmästäsi \"{{name}}\", joka vaaditaan tämän työkalun suorittamiseen.",
+      "startFailed": "MCP-työkalun suorittamisessa tapahtui virhe"
+    },
     "toolMenu": {
       "delete": "Poista",
       "edit": "Muokkaa",
@@ -439,7 +446,11 @@
     "tokenPackageRemainingUsage": "Jäljellä oleva käyttö",
     "tokenPackageWarningTitle": "Token-kiintiö käytetty loppuun.",
     "tokenPackageWarning": "Voit täydentää lisää token-käyttöä OAPhubin <planLink>Dashboard-sivulla</planLink>.",
-    "skipTlsVerifyWarning": "Turvallisuusvaroitus: Sertifikaatin vahvistuksen ohittaminen voi vähentää yhteyden turvallisuutta. Suositellaan käyttämään luotetuissa verkkoympäristöissä."
+    "skipTlsVerifyWarning": "Turvallisuusvaroitus: Sertifikaatin vahvistuksen ohittaminen voi vähentää yhteyden turvallisuutta. Suositellaan käyttämään luotetuissa verkkoympäristöissä.",
+    "allRateLimitReachedTitle": "Mallien ja MCP-palvelimien kutsuraja saavutettu.",
+    "llmRateLimitReachedTitle": "Mallien kutsuraja saavutettu.",
+    "mcpRateLimitReachedTitle": "MCP-palvelimien kutsuraja saavutettu.",
+    "rateLimitReachedDescription": "Odota ennen uusien pyyntöjen tekemistä; kiintiö palautuu automaattisesti."
   },
   "toast": {
     "copiedToClipboard": "Kopioitu leikepöydälle",
@@ -455,6 +466,7 @@
       "chat-input_upload-file": "Lataa tiedosto",
       "chat-input_focus": "Näytä kohdistin syöttökentässä ja kirjoita suoraan",
       "chat-input_paste-last-message": "Liitä viimeinen viesti",
+      "chat-input_history-up": "Edellinen syöte",
       "chat-message_copy-last": "Kopioi viimeinen viesti",
       "chat_delete": "Poista keskustelu",
       "global_new-chat": "Uusi keskustelu",
@@ -463,6 +475,7 @@
       "global_toggle-keymap-modal": "Vaihda pikanäppäinapua",
       "global_rename-chat": "Nimeä keskustelu uudelleen",
       "global_setting-page": "Avaa hallinta ja asetukset",
+      "global_close-window": "Lopeta/Pienennä ikkuna",
       "global_reload": "Lataa ikkuna uudelleen"
     }
   },

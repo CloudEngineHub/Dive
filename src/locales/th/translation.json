@@ -127,6 +127,10 @@
     "saveSuccess": "บันทึกการตั้งค่าสำเร็จ",
     "saveFailed": "การบันทึกการตั้งค่าล้มเหลว",
     "toggleFailed": "เกิดข้อผิดพลาด",
+    "subTitle": {
+      "startFailed": "การเริ่มต้นล้มเหลว, เกิดข้อผิดพลาด",
+      "notAuthorized": "การเริ่มต้นล้มเหลว, ไม่ได้เชื่อมต่อ"
+    },
     "reloadFailed": "{{toolName}} เกิดข้อผิดพลาด การโหลดใหม่ล้มเหลว",
     "reloadAllFailed": "การเรียกเครื่องมือ {{number}} รายการเกิดข้อผิดพลาด การโหลดใหม่ล้มเหลว",
     "openConfigFolder": "โฟลเดอร์การกำหนดค่า",
@@ -137,7 +141,10 @@
     "invalidJson": "รูปแบบ JSON ไม่ถูกต้อง",
     "updateFailed": "{{serverName}} การโหลดล้มเหลว: {{error}}",
     "installFailed": "การติดตั้งล้มเหลว",
-    "startFailed": "การเริ่มต้นล้มเหลว",
+    "failTooltip": {
+      "commandNotFound": "เราตรวจพบว่าคำสั่ง {{command}} หายไปจากระบบ \"{{name}}\" ของคุณ ซึ่งจำเป็นต้องใช้ในการเรียกใช้เครื่องมือนี้",
+      "startFailed": "เกิดข้อผิดพลาดขณะเรียกใช้เครื่องมือ MCP"
+    },
     "toolMenu": {
       "delete": "ลบ",
       "edit": "แก้ไข",
@@ -439,7 +446,11 @@
     "tokenPackageRemainingUsage": "การใช้งานที่เหลือ",
     "tokenPackageWarningTitle": "โควต้าโทเค็นหมดแล้ว",
     "tokenPackageWarning": "คุณสามารถเติมการใช้งานโทเค็นเพิ่มเติมได้ที่ OAPhub <planLink>หน้า Dashboard</planLink>",
-    "skipTlsVerifyWarning": "คำเตือนด้านความปลอดภัย: การเพิกเฉยการตรวจสอบใบรับรองอาจลดความปลอดภัยในการเชื่อมต่อ แนะนำให้ใช้ในสภาพแวดล้อมเครือข่ายที่เชื่อถือได้"
+    "skipTlsVerifyWarning": "คำเตือนด้านความปลอดภัย: การเพิกเฉยการตรวจสอบใบรับรองอาจลดความปลอดภัยในการเชื่อมต่อ แนะนำให้ใช้ในสภาพแวดล้อมเครือข่ายที่เชื่อถือได้",
+    "allRateLimitReachedTitle": "ถึงขีดจำกัดการเรียกโมเดลและเซิร์ฟเวอร์ MCP แล้ว",
+    "llmRateLimitReachedTitle": "ถึงขีดจำกัดการเรียกโมเดลแล้ว",
+    "mcpRateLimitReachedTitle": "ถึงขีดจำกัดการเรียกเซิร์ฟเวอร์ MCP แล้ว",
+    "rateLimitReachedDescription": "กรุณารอก่อนทำคำขอใหม่ โควต้าจะถูกกู้คืนโดยอัตโนมัติ"
   },
   "toast": {
     "copiedToClipboard": "คัดลอกไปยังคลิปบอร์ดแล้ว",
@@ -455,6 +466,7 @@
       "chat-input_upload-file": "อัปโหลดไฟล์",
       "chat-input_focus": "แสดงเคอร์เซอร์ในฟิลด์ป้อนข้อมูลและเขียนโดยตรง",
       "chat-input_paste-last-message": "วางข้อความล่าสุด",
+      "chat-input_history-up": "ข้อความก่อนหน้า",
       "chat-message_copy-last": "คัดลอกข้อความล่าสุด",
       "chat_delete": "ลบแชท",
       "global_new-chat": "แชทใหม่",
@@ -463,6 +475,7 @@
       "global_toggle-keymap-modal": "สลับความช่วยเหลือปุ่มลัด",
       "global_rename-chat": "เปลี่ยนชื่อแชท",
       "global_setting-page": "เปิดการจัดการและการตั้งค่า",
+      "global_close-window": "ออก/ย่อหน้าต่าง",
       "global_reload": "โหลดหน้าต่างใหม่"
     }
   },

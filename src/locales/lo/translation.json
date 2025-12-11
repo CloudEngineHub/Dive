@@ -127,6 +127,10 @@
     "saveSuccess": "ບັນທຶກການຕັ້ງຄ່າສຳເລັດ",
     "saveFailed": "ການບັນທຶກການຕັ້ງຄ່າລົ້ມເຫລວ",
     "toggleFailed": "ເກີດຄວາມຜິດພາດ",
+    "subTitle": {
+      "startFailed": "ການເລີ່ມຕົ້ນລົ້ມເຫລວ, ເກີດຄວາມຜິດພາດ",
+      "notAuthorized": "ການເລີ່ມຕົ້ນລົ້ມເຫລວ, ບໍ່ໄດ້ເຊື່ອມຕໍ່"
+    },
     "reloadFailed": "{{toolName}} ເກີດຄວາມຜິດພາດ, ການໂຫລດໃໝ່ລົ້ມເຫລວ",
     "reloadAllFailed": "ການເອີ້ນໃຊ້ເຄື່ອງມື {{number}} ຄັ້ງເກີດຄວາມຜິດພາດ, ການໂຫລດໃໝ່ລົ້ມເຫລວ",
     "openConfigFolder": "ໂຟນເດີການກຳນົດຄ່າ",
@@ -137,7 +141,10 @@
     "invalidJson": "ຮູບແບບ JSON ບໍ່ຖືກຕ້ອງ",
     "updateFailed": "{{serverName}} ການໂຫລດລົ້ມເຫລວ: {{error}}",
     "installFailed": "ການຕິດຕັ້ງລົ້ມເຫລວ",
-    "startFailed": "ການເລີ່ມຕົ້ນລົ້ມເຫລວ",
+    "failTooltip": {
+      "commandNotFound": "ພວກເຮົາກວດພົບວ່າຄຳສັ່ງ {{command}} ຫາຍໄປຈາກລະບົບ \"{{name}}\" ຂອງທ່ານ, ເຊິ່ງຈຳເປັນຕ້ອງໃຊ້ເຄື່ອງມືນີ້.",
+      "startFailed": "ເກີດຄວາມຜິດພາດໃນຂະນະທີ່ແລ່ນເຄື່ອງມື MCP"
+    },
     "toolMenu": {
       "delete": "ລຶບ",
       "edit": "ແກ້ໄຂ",
@@ -439,7 +446,11 @@
     "tokenPackageRemainingUsage": "ການໃຊ້ງານທີ່ເຫຼືອ",
     "tokenPackageWarningTitle": "ໂຄຕ້າໂທເຄັນຖືກໃຊ້ໝົດແລ້ວ.",
     "tokenPackageWarning": "ທ່ານສາມາດເຕີມການໃຊ້ງານໂທເຄັນເພີ່ມເຕີມທີ່ OAPhub <planLink>ໜ້າ Dashboard</planLink>.",
-    "skipTlsVerifyWarning": "ຄຳເຕືອນດ້ານຄວາມປອດໄພ: ການລະເລີຍການຢັ້ງຢືນໃບຢັ້ງຢືນອາດຫຼຸດຄວາມປອດໄພຂອງການເຊື່ອມຕໍ່. ແນະນຳໃຫ້ໃຊ້ໃນສະພາບແວດລ້ອມເຄືອຂ່າຍທີ່ເຊື່ອຖືໄດ້."
+    "skipTlsVerifyWarning": "ຄຳເຕືອນດ້ານຄວາມປອດໄພ: ການລະເລີຍການຢັ້ງຢືນໃບຢັ້ງຢືນອາດຫຼຸດຄວາມປອດໄພຂອງການເຊື່ອມຕໍ່. ແນະນຳໃຫ້ໃຊ້ໃນສະພາບແວດລ້ອມເຄືອຂ່າຍທີ່ເຊື່ອຖືໄດ້.",
+    "allRateLimitReachedTitle": "ຮອດຂີດຈຳກັດການໂທຂອງໂມເດວ ແລະ ເຊີບເວີ MCP ແລ້ວ.",
+    "llmRateLimitReachedTitle": "ຮອດຂີດຈຳກັດການໂທຂອງໂມເດວແລ້ວ.",
+    "mcpRateLimitReachedTitle": "ຮອດຂີດຈຳກັດການໂທຂອງເຊີບເວີ MCP ແລ້ວ.",
+    "rateLimitReachedDescription": "ກະລຸນາລໍຖ້າກ່ອນທີ່ຈະສົ່ງຄຳຂໍໃໝ່; ໂຄຕ້າຈະຖືກຟື້ນຟູອັດຕະໂນມັດ."
   },
   "toast": {
     "copiedToClipboard": "ສຳເນົາໄປຍັງຄລິບບອດແລ້ວ",
@@ -455,6 +466,7 @@
       "chat-input_upload-file": "ອັບໂຫລດໄຟລ໌",
       "chat-input_focus": "ສະແດງໂຕຊີ້ໃນຊ່ອງນຳເຂົ້າແລະຂຽນໂດຍກົງ",
       "chat-input_paste-last-message": "ວາງຂໍ້ຄວາມລ່າສຸດ",
+      "chat-input_history-up": "ການປ້ອນຂໍ້ມູນກ່ອນໜ້າ",
       "chat-message_copy-last": "ສຳເນົາຂໍ້ຄວາມລ່າສຸດ",
       "chat_delete": "ລຶບການສົນທະນາ",
       "global_new-chat": "ການສົນທະນາໃໝ່",
@@ -463,6 +475,7 @@
       "global_toggle-keymap-modal": "ສະຫຼັບຄວາມຊ່ວຍເຫຼືອປຸ່ມລັດ",
       "global_rename-chat": "ປ່ຽນຊື່ການສົນທະນາ",
       "global_setting-page": "ເປີດການຈັດການແລະການຕັ້ງຄ່າ",
+      "global_close-window": "ອອກ/ຫຍໍ້ໜ້າຕ່າງ",
       "global_reload": "ໂຫຼດໜ້າຕ່າງຄືນໃໝ່"
     }
   },

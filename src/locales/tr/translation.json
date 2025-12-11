@@ -127,6 +127,10 @@
     "saveSuccess": "Ayarlar başarıyla kaydedildi",
     "saveFailed": "Ayarları kaydetme başarısız",
     "toggleFailed": "Bir hata oluştu",
+    "subTitle": {
+      "startFailed": "Başlatma başarısız, bir hata oluştu",
+      "notAuthorized": "Başlatma başarısız, Bağlı değil"
+    },
     "reloadFailed": "{{toolName}} bir hata oluştu, yeniden yükleme başarısız",
     "reloadAllFailed": "{{number}} araç çağrısı bir hata oluştu, yeniden yükleme başarısız",
     "openConfigFolder": "Yapılandırma Klasörü",
@@ -137,7 +141,10 @@
     "invalidJson": "Geçersiz JSON formatı",
     "updateFailed": "{{serverName}} yükleme başarısız: {{error}}",
     "installFailed": "Kurulum başarısız",
-    "startFailed": "Başlatma başarısız",
+    "failTooltip": {
+      "commandNotFound": "\"{{name}}\" sisteminizde {{command}} komutunun eksik olduğunu tespit ettik, bu araç çalıştırılması için gereklidir.",
+      "startFailed": "MCP aracı çalıştırılırken bir hata oluştu"
+    },
     "toolMenu": {
       "delete": "Sil",
       "edit": "Düzenle",
@@ -439,7 +446,11 @@
     "tokenPackageRemainingUsage": "Kalan kullanım",
     "tokenPackageWarningTitle": "Jeton kotası tükendi.",
     "tokenPackageWarning": "OAPhub <planLink>Kontrol Paneli sayfasında</planLink> daha fazla jeton kullanımı doldurabilirsiniz.",
-    "skipTlsVerifyWarning": "Güvenlik uyarısı: Sertifika doğrulamasını yoksaymak bağlantı güvenliğini azaltabilir. Güvenilir ağ ortamlarında kullanılması önerilir."
+    "skipTlsVerifyWarning": "Güvenlik uyarısı: Sertifika doğrulamasını yoksaymak bağlantı güvenliğini azaltabilir. Güvenilir ağ ortamlarında kullanılması önerilir.",
+    "allRateLimitReachedTitle": "Model ve MCP sunucu çağrı sınırına ulaşıldı.",
+    "llmRateLimitReachedTitle": "Model çağrı sınırına ulaşıldı.",
+    "mcpRateLimitReachedTitle": "MCP sunucu çağrı sınırına ulaşıldı.",
+    "rateLimitReachedDescription": "Yeni istekler yapmadan önce lütfen bekleyin; kota otomatik olarak geri yüklenecektir."
   },
   "toast": {
     "copiedToClipboard": "Panoya kopyalandı",
@@ -455,6 +466,7 @@
       "chat-input_upload-file": "Dosya Yükle",
       "chat-input_focus": "Giriş alanında imleci göster ve doğrudan yaz",
       "chat-input_paste-last-message": "Son Mesajı Yapıştır",
+      "chat-input_history-up": "Önceki Giriş",
       "chat-message_copy-last": "Son Mesajı Kopyala",
       "chat_delete": "Sohbeti Sil",
       "global_new-chat": "Yeni Sohbet",
@@ -463,6 +475,7 @@
       "global_toggle-keymap-modal": "Klavye Kısayolu Yardımını Değiştir",
       "global_rename-chat": "Sohbeti Yeniden Adlandır",
       "global_setting-page": "Yönetim ve ayarları aç",
+      "global_close-window": "Çıkış/Küçült",
       "global_reload": "Pencereyi Yeniden Yükle"
     }
   },

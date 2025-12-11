@@ -127,6 +127,10 @@
     "saveSuccess": "Đã lưu cài đặt thành công",
     "saveFailed": "Lưu cài đặt thất bại",
     "toggleFailed": "Đã xảy ra lỗi",
+    "subTitle": {
+      "startFailed": "Khởi động thất bại, đã xảy ra lỗi",
+      "notAuthorized": "Khởi động thất bại, Chưa kết nối"
+    },
     "reloadFailed": "{{toolName}} đã xảy ra lỗi, tải lại thất bại",
     "reloadAllFailed": "{{number}} lần gọi công cụ đã xảy ra lỗi, tải lại thất bại",
     "openConfigFolder": "Thư mục cấu hình",
@@ -137,7 +141,10 @@
     "invalidJson": "Định dạng JSON không hợp lệ",
     "updateFailed": "{{serverName}} tải thất bại: {{error}}",
     "installFailed": "Cài đặt thất bại",
-    "startFailed": "Khởi động thất bại",
+    "failTooltip": {
+      "commandNotFound": "Chúng tôi phát hiện rằng lệnh {{command}} bị thiếu trong hệ thống \"{{name}}\" của bạn, cần thiết để chạy công cụ này.",
+      "startFailed": "Đã xảy ra lỗi khi chạy công cụ MCP"
+    },
     "toolMenu": {
       "delete": "Xóa",
       "edit": "Chỉnh sửa",
@@ -439,7 +446,11 @@
     "tokenPackageRemainingUsage": "Sử dụng còn lại",
     "tokenPackageWarningTitle": "Hạn ngạch token đã hết.",
     "tokenPackageWarning": "Bạn có thể nạp thêm sử dụng token tại OAPhub <planLink>trang Dashboard</planLink>.",
-    "skipTlsVerifyWarning": "Cảnh báo bảo mật: Bỏ qua xác minh chứng chỉ có thể giảm bảo mật kết nối. Nên sử dụng trong môi trường mạng đáng tin cậy."
+    "skipTlsVerifyWarning": "Cảnh báo bảo mật: Bỏ qua xác minh chứng chỉ có thể giảm bảo mật kết nối. Nên sử dụng trong môi trường mạng đáng tin cậy.",
+    "allRateLimitReachedTitle": "Đã đạt giới hạn gọi mô hình và máy chủ MCP.",
+    "llmRateLimitReachedTitle": "Đã đạt giới hạn gọi mô hình.",
+    "mcpRateLimitReachedTitle": "Đã đạt giới hạn gọi máy chủ MCP.",
+    "rateLimitReachedDescription": "Vui lòng đợi trước khi thực hiện yêu cầu mới; hạn ngạch sẽ được khôi phục tự động."
   },
   "toast": {
     "copiedToClipboard": "Đã sao chép vào clipboard",
@@ -455,6 +466,7 @@
       "chat-input_upload-file": "Tải file lên",
       "chat-input_focus": "Hiển thị con trỏ trong trường nhập và viết trực tiếp",
       "chat-input_paste-last-message": "Dán tin nhắn cuối cùng",
+      "chat-input_history-up": "Tin nhắn trước đó",
       "chat-message_copy-last": "Sao chép tin nhắn cuối cùng",
       "chat_delete": "Xóa trò chuyện",
       "global_new-chat": "Trò chuyện mới",
@@ -463,6 +475,7 @@
       "global_toggle-keymap-modal": "Chuyển đổi trợ giúp phím tắt",
       "global_rename-chat": "Đổi tên trò chuyện",
       "global_setting-page": "Mở quản lý và cài đặt",
+      "global_close-window": "Thoát/Thu nhỏ cửa sổ",
       "global_reload": "Tải lại cửa sổ"
     }
   },

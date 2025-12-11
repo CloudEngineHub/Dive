@@ -1,6 +1,6 @@
 import { ipcRenderer, contextBridge } from "electron"
 
-import type { OAPModelDescriptionParam, MCPServerSearchParam } from "../../types/oap"
+import type { OAPModelDescriptionParam, MCPServerSearchParam, OAPLimiterCheckParam } from "../../types/oap"
 import type { ModelGroupSetting } from "../../types/model"
 
 // --------- Expose some API to the Renderer process ---------
@@ -43,6 +43,7 @@ contextBridge.exposeInMainWorld("ipcRenderer", {
   refreshConfig: () => ipcRenderer.invoke("util:refreshConfig"),
   getInstallHostDependenciesLog: () => ipcRenderer.invoke("util:getInstallHostDependenciesLog"),
   getClientInfo: () => ipcRenderer.invoke("util:getClientInfo"),
+  checkCommandExist: (command: string) => ipcRenderer.invoke("util:checkCommandExist", command),
   readLocalFile: (filePath: string) => ipcRenderer.invoke("util:readLocalFile", filePath),
 
   // system
@@ -51,6 +52,8 @@ contextBridge.exposeInMainWorld("ipcRenderer", {
   setAutoLaunch: (enable: boolean) => ipcRenderer.invoke("system:setAutoLaunch", enable),
   getMinimalToTray: () => ipcRenderer.invoke("system:getMinimalToTray"),
   setMinimalToTray: (enable: boolean) => ipcRenderer.invoke("system:setMinimalToTray", enable),
+  closeWindow: () => ipcRenderer.invoke("system:closeWindow"),
+  hideWindow: () => ipcRenderer.invoke("system:hideWindow"),
 
   // llm
   openaiModelList: (apiKey: string) => ipcRenderer.invoke("llm:openaiModelList", apiKey),
@@ -82,6 +85,7 @@ contextBridge.exposeInMainWorld("ipcRenderer", {
   oapGetMCPServers: () => ipcRenderer.invoke("oap:getMCPServers"),
   oapGetMe: () => ipcRenderer.invoke("oap:getMe"),
   oapGetUsage: () => ipcRenderer.invoke("oap:getUsage"),
+  oapLimiterCheck: (params: OAPLimiterCheckParam) => ipcRenderer.invoke("oap:limiterCheck", params),
   oapRegistEvent: (event: "login" | "logout", callback: () => void) => {
     ipcRenderer.on(`oap:${event}`, callback)
     return () => ipcRenderer.off(`oap:${event}`, callback)

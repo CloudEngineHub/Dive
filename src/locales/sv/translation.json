@@ -127,6 +127,10 @@
     "saveSuccess": "Inställningar sparade framgångsrikt",
     "saveFailed": "Misslyckades med att spara inställningar",
     "toggleFailed": "Ett fel uppstod",
+    "subTitle": {
+      "startFailed": "Start misslyckades, ett fel uppstod",
+      "notAuthorized": "Start misslyckades, Inte ansluten"
+    },
     "reloadFailed": "{{toolName}} ett fel uppstod, omladdning misslyckades",
     "reloadAllFailed": "{{number}} verktygsanrop ett fel uppstod, omladdning misslyckades",
     "openConfigFolder": "Konfigurationsmapp",
@@ -137,7 +141,10 @@
     "invalidJson": "Ogiltigt JSON-format",
     "updateFailed": "{{serverName}} misslyckades ladda: {{error}}",
     "installFailed": "Installation misslyckades",
-    "startFailed": "Start misslyckades",
+    "failTooltip": {
+      "commandNotFound": "Vi upptäckte att {{command}}-kommandot saknas i ditt \"{{name}}\"-system, vilket krävs för att köra detta verktyg.",
+      "startFailed": "Ett fel uppstod när MCP-verktyget kördes"
+    },
     "toolMenu": {
       "delete": "Ta bort",
       "edit": "Redigera",
@@ -439,7 +446,11 @@
     "tokenPackageRemainingUsage": "Återstående användning",
     "tokenPackageWarningTitle": "Token-kvot förbrukad.",
     "tokenPackageWarning": "Du kan fylla på mer token-användning på OAPhub <planLink>instrumentpanelssidan</planLink>.",
-    "skipTlsVerifyWarning": "Säkerhetsvarning: Att ignorera certifikatverifiering kan minska anslutningens säkerhet. Det rekommenderas att använda i pålitliga nätverksmiljöer."
+    "skipTlsVerifyWarning": "Säkerhetsvarning: Att ignorera certifikatverifiering kan minska anslutningens säkerhet. Det rekommenderas att använda i pålitliga nätverksmiljöer.",
+    "allRateLimitReachedTitle": "Anropsgräns för modeller och MCP-servrar nådd.",
+    "llmRateLimitReachedTitle": "Anropsgräns för modeller nådd.",
+    "mcpRateLimitReachedTitle": "Anropsgräns för MCP-servrar nådd.",
+    "rateLimitReachedDescription": "Vänta innan du gör nya förfrågningar; kvoten återställs automatiskt."
   },
   "toast": {
     "copiedToClipboard": "Kopierad till urklipp",
@@ -455,6 +466,7 @@
       "chat-input_upload-file": "Ladda upp fil",
       "chat-input_focus": "Visa markör i inmatningsfält och skriv direkt",
       "chat-input_paste-last-message": "Klistra in senaste meddelandet",
+      "chat-input_history-up": "Föregående inmatning",
       "chat-message_copy-last": "Kopiera senaste meddelandet",
       "chat_delete": "Ta bort chatt",
       "global_new-chat": "Ny chatt",
@@ -463,6 +475,7 @@
       "global_toggle-keymap-modal": "Växla tangentbordsgenvägshjälp",
       "global_rename-chat": "Byt namn på chatt",
       "global_setting-page": "Öppna hantering och inställningar",
+      "global_close-window": "Avsluta/Minimera fönster",
       "global_reload": "Ladda om fönster"
     }
   },

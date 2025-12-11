@@ -127,6 +127,10 @@
     "saveSuccess": "Innstillinger lagret vellykket",
     "saveFailed": "Lagring av innstillinger mislyktes",
     "toggleFailed": "En feil oppstod",
+    "subTitle": {
+      "startFailed": "Start mislyktes, en feil oppstod",
+      "notAuthorized": "Start mislyktes, Ikke tilkoblet"
+    },
     "reloadFailed": "{{toolName}} en feil oppstod, omlasting mislyktes",
     "reloadAllFailed": "{{number}} verktøyanrop en feil oppstod, omlasting mislyktes",
     "openConfigFolder": "Konfigurasjonsmappe",
@@ -137,7 +141,10 @@
     "invalidJson": "Ugyldig JSON-format",
     "updateFailed": "{{serverName}} mislyktes å laste: {{error}}",
     "installFailed": "Installasjon mislyktes",
-    "startFailed": "Start mislyktes",
+    "failTooltip": {
+      "commandNotFound": "Vi oppdaget at {{command}}-kommandoen mangler fra \"{{name}}\"-systemet ditt, som er nødvendig for å kjøre dette verktøyet.",
+      "startFailed": "Det oppstod en feil under kjøring av MCP-verktøyet"
+    },
     "toolMenu": {
       "delete": "Slett",
       "edit": "Rediger",
@@ -439,7 +446,11 @@
     "tokenPackageRemainingUsage": "Gjenværende bruk",
     "tokenPackageWarningTitle": "Token-kvote brukt opp.",
     "tokenPackageWarning": "Du kan fylle på mer token-bruk på OAPhub <planLink>Dashboard-siden</planLink>.",
-    "skipTlsVerifyWarning": "Sikkerhetsadvarsel: Å ignorere sertifikatverifisering kan redusere tilkoblingssikkerheten. Det anbefales å bruke i pålitelige nettverksmiljøer."
+    "skipTlsVerifyWarning": "Sikkerhetsadvarsel: Å ignorere sertifikatverifisering kan redusere tilkoblingssikkerheten. Det anbefales å bruke i pålitelige nettverksmiljøer.",
+    "allRateLimitReachedTitle": "Anropsgrense for modeller og MCP-servere nådd.",
+    "llmRateLimitReachedTitle": "Anropsgrense for modeller nådd.",
+    "mcpRateLimitReachedTitle": "Anropsgrense for MCP-servere nådd.",
+    "rateLimitReachedDescription": "Vennligst vent før du gjør nye forespørsler; kvoten vil bli gjenopprettet automatisk."
   },
   "toast": {
     "copiedToClipboard": "Kopiert til utklippstavle",
@@ -455,6 +466,7 @@
       "chat-input_upload-file": "Last opp fil",
       "chat-input_focus": "Vis markør i inndatafeltet og skriv direkte",
       "chat-input_paste-last-message": "Lim inn siste melding",
+      "chat-input_history-up": "Forrige inndata",
       "chat-message_copy-last": "Kopier siste melding",
       "chat_delete": "Slett chat",
       "global_new-chat": "Ny chat",
@@ -463,6 +475,7 @@
       "global_toggle-keymap-modal": "Bytt tastatursnarveihjel p",
       "global_rename-chat": "Gi nytt navn til chat",
       "global_setting-page": "Åpne administrasjon og innstillinger",
+      "global_close-window": "Avslutt/Minimer vindu",
       "global_reload": "Last vindu på nytt"
     }
   },

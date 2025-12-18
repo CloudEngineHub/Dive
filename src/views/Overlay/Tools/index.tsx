@@ -468,18 +468,7 @@ const Tools = ({ _subtab, _tabdata }: { _subtab?: Subtab, _tabdata?: any }) => {
       await onDisconnectConnector(key)
     }
     try {
-      // const filledConfig = await window.ipcRenderer.fillPathToConfig(JSON.stringify(newConfig))
       const filledConfig = { ...newConfig }
-      const connectorList = Object.entries(mcpConfig.mcpServers).filter(([key, value]) => value.transport === "streamable").reduce((acc, [key, value]) => {
-        acc[key] = value
-        return acc
-      }, {} as MCPConfig)
-
-      filledConfig.mcpServers = {
-        ...newConfig.mcpServers,
-        ...connectorList,
-      }
-
       const data = await updateMCPConfig(filledConfig, false, true)
       if (data?.errors && Array.isArray(data.errors) && data.errors.length) {
         data.errors
@@ -679,9 +668,7 @@ const Tools = ({ _subtab, _tabdata }: { _subtab?: Subtab, _tabdata?: any }) => {
     }
     setLoadingTools(prev => ({ ...prev, [toolLoadingKey]: { enabled: !tool.enabled } }))
     try {
-      if(!mcpConfigRef.current) {
-        mcpConfigRef.current = JSON.parse(JSON.stringify(mcpConfig))
-      }
+      mcpConfigRef.current = JSON.parse(JSON.stringify(mcpConfig))
 
       const currentEnabled = tool.enabled
       const newConfig = JSON.parse(JSON.stringify(mcpConfigRef.current))

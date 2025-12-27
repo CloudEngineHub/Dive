@@ -53,6 +53,20 @@
       "enableToast": "เปิดการเรียกเครื่องมือแล้ว",
       "enable": "เปิดการเรียกเครื่องมือ"
     },
+    "reAuthorize": {
+      "title": "เกิดข้อผิดพลาดในการอนุญาตเมื่อเรียกใช้เครื่องมือ",
+      "description": "การอนุญาตสำหรับเครื่องมือนี้หมดอายุหรือถูกยกเลิกแล้ว ดังนั้นจึงไม่สามารถใช้เครื่องมือต่อไปได้ จำเป็นต้องมีการอนุญาตใหม่เพื่อฟื้นฟูฟังก์ชันการทำงานทั้งหมด",
+      "confirm": "อนุญาตอีกครั้ง",
+      "stopChange": "กำลังอนุญาตอยู่ กรุณาอย่าแก้ไขการตั้งค่า"
+    },
+    "elicitation": {
+      "title": "Input Required",
+      "selectOption": "Select an option",
+      "decline": "Decline",
+      "submit": "Submit",
+      "confirmTitle": "ต้องยืนยัน",
+      "confirm": "ยืนยัน"
+    },
     "tokens": {
       "tooltip": "จำนวนโทเค็นอินพุต",
       "model": "Model",
@@ -174,6 +188,7 @@
     "argsTitleAlt": "อาร์กิวเมนต์",
     "addEnv": "เพิ่มตัวแปรสภาพแวดล้อม",
     "envTitleAlt": "ตัวแปรสภาพแวดล้อม",
+    "ignoreVerification": "ข้ามการตรวจสอบ SSL/TLS",
     "addHeaders": "เพิ่ม Headers",
     "headersTitleAlt": "Headers",
     "toolCallTimeoutAlt": "ค่าเริ่มต้นคือ 600 วินาที ไม่มีขีดจำกัดสูงสุด",
@@ -254,15 +269,17 @@
     "oap": {
       "type": {
         "all": "เครื่องมือทั้งหมด",
-        "base": "แสดงเฉพาะ Base",
-        "pro": "แสดงเฉพาะ Pro"
+        "base": "แสดงเฉพาะ OAP_Base",
+        "pro": "แสดงเฉพาะ OAP_Pro",
+        "official": "แสดงเฉพาะ Official"
       },
       "sort": {
         "title": "เรียงลำดับ",
         "popular": "ยอดนิยม",
         "new": "ใหม่"
       },
-      "tag": "แท็ก",
+      "tag": "หมวดหมู่",
+      "show_more": "เพิ่มเติม",
       "no_search_data_title": "ไม่พบเครื่องมือ MCP",
       "no_search_data": "ไม่พบผลการค้นหา กรุณาล้างคำค้นหาหรือปรับเงื่อนไขการกรอง",
       "clear_filter": "ล้างตัวกรอง",
@@ -534,4 +551,3 @@
     }
   }
 }
-

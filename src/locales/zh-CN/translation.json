@@ -59,6 +59,14 @@
       "confirm": "重新授权",
       "stopChange": "授权进行中，请勿修改配置"
     },
+    "elicitation": {
+      "title": "需要输入",
+      "selectOption": "选择一个选项",
+      "decline": "拒绝",
+      "submit": "提交",
+      "confirmTitle": "需要确认",
+      "confirm": "确认"
+    },
     "tokens": {
       "tooltip": "输入 Token 数",
       "model": "Model",
@@ -182,6 +190,7 @@
     "envTitleAlt": "环境变量",
     "addArg": "新增参数",
     "addEnv": "新增环境变量",
+    "ignoreVerification": "忽略 SSL/TLS 证书验证",
     "addHeaders": "新增 Headers",
     "headersTitleAlt": "Headers",
     "toolCallTimeoutAlt": "默认为 600 秒，没有最大秒数限制。",
@@ -274,15 +283,17 @@
     "oap": {
       "type": {
         "all": "所有工具",
-        "base": "仅显示 Base",
-        "pro": "仅显示 Pro"
+        "base": "仅显示 OAP_Base",
+        "pro": "仅显示 OAP_Pro",
+        "official": "仅显示 Official"
       },
       "sort": {
         "title": "排序",
-        "popular": "热门",
+        "popular": "最热门",
         "new": "最新"
       },
-      "tag": "标签",
+      "tag": "类别",
+      "show_more": "更多",
       "no_search_data_title": "搜索不到任何的 MCP Tools",
       "no_search_data": "没有找到搜索结果，请清除关键字或调整筛选条件。",
       "clear_filter": "清除筛选条件",

@@ -59,6 +59,14 @@
       "confirm": "再認証",
       "stopChange": "認証中は設定を変更しないでください"
     },
+    "elicitation": {
+      "title": "入力が必要です",
+      "selectOption": "オプションを選択",
+      "decline": "拒否",
+      "submit": "送信",
+      "confirmTitle": "確認が必要です",
+      "confirm": "確認"
+    },
     "tokens": {
       "tooltip": "入力トークン数",
       "model": "Model",
@@ -182,6 +190,7 @@
     "envTitleAlt": "環境変数",
     "addArg": "引数を追加",
     "addEnv": "環境変数を追加",
+    "ignoreVerification": "SSL/TLS検証を無視する",
     "addHeaders": "Headersを追加",
     "headersTitleAlt": "Headers",
     "toolCallTimeoutAlt": "デフォルトは600秒、最大制限はありません。",
@@ -274,15 +283,17 @@
     "oap": {
       "type": {
         "all": "すべてのツール",
-        "base": "Baseのみ表示",
-        "pro": "Proのみ表示"
+        "base": "OAP_Baseのみ表示",
+        "pro": "OAP_Proのみ表示",
+        "official": "Officialのみ表示"
       },
       "sort": {
         "title": "並び替え",
         "popular": "人気順",
         "new": "新着順"
       },
-      "tag": "タグ",
+      "tag": "カテゴリ",
+      "show_more": "もっと見る",
       "no_search_data_title": "MCPツールが見つかりません",
       "no_search_data": "検索結果が見つかりません。キーワードをクリアするか、フィルター条件を調整してください。",
       "clear_filter": "フィルター条件をクリア",

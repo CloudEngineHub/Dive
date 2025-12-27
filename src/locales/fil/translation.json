@@ -53,6 +53,20 @@
       "enableToast": "Na-enable ang Tool Calls",
       "enable": "I-enable ang Tool Calls"
     },
+    "reAuthorize": {
+      "title": "Naganap ang error sa authorization habang tinatawag ang tool",
+      "description": "Nag-expire na o na-cancel ang authorization para sa tool na ito, kaya hindi na magagamit ang tool. Kailangan ng bagong authorization para maibalik ang buong functionality.",
+      "confirm": "Mag-reauthorize",
+      "stopChange": "Nagp-proseso ang authorization, huwag baguhin ang configuration"
+    },
+    "elicitation": {
+      "title": "Input Required",
+      "selectOption": "Select an option",
+      "decline": "Decline",
+      "submit": "Submit",
+      "confirmTitle": "Kailangan ng Kumpirmasyon",
+      "confirm": "Kumpirmahin"
+    },
     "tokens": {
       "tooltip": "Bilang ng Input Token",
       "model": "Model",
@@ -174,6 +188,7 @@
     "argsTitleAlt": "Mga Argument",
     "addEnv": "Magdagdag ng Environment Variable",
     "envTitleAlt": "Environment Variable",
+    "ignoreVerification": "Huwag pansinin ang SSL/TLS verification",
     "addHeaders": "Magdagdag ng Headers",
     "headersTitleAlt": "Headers",
     "toolCallTimeoutAlt": "Default ay 600 segundo, walang maximum na limitasyon.",
@@ -254,15 +269,17 @@
     "oap": {
       "type": {
         "all": "Lahat ng Tools",
-        "base": "Ipakita ang Base Lamang",
-        "pro": "Ipakita ang Pro Lamang"
+        "base": "Ipakita ang OAP_Base Lamang",
+        "pro": "Ipakita ang OAP_Pro Lamang",
+        "official": "Ipakita ang Official Lamang"
       },
       "sort": {
         "title": "Ayusin",
         "popular": "Sikat",
         "new": "Bago"
       },
-      "tag": "Tag",
+      "tag": "Kategorya",
+      "show_more": "Higit Pa",
       "no_search_data_title": "Walang nahanap na MCP Tools",
       "no_search_data": "Walang nahanap na resulta sa paghahanap, mangyaring i-clear ang keyword sa paghahanap o isaayos ang mga kundisyon ng filter.",
       "clear_filter": "I-clear ang Filter",
@@ -538,4 +555,3 @@
     }
   }
 }
-

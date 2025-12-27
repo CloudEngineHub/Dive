@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-import type { MCPServerSearchParam, OAPMCPServer, OAPUser, ApiResponse, OAPModelDescription, OAPModelDescriptionParam, OAPLimiterCheck, OAPLimiterCheckParam } from "../types/oap"
+import type { MCPServerSearchParam, OAPMCPServer, OAPMCPTagsResponse, OAPUser, ApiResponse, OAPModelDescription, OAPModelDescriptionParam, OAPLimiterCheck, OAPLimiterCheckParam } from "../types/oap"
 import type { ModelGroupSetting } from "../types/model"
 
 type ModelResults = {
@@ -46,6 +46,7 @@ declare global {
       oapRegistEvent: (event: "login" | "logout", callback: () => void) => () => void
       oapGetUsage: () => Promise<OAPUsage>
       oapLimiterCheck: (params: OAPLimiterCheckParam) => Promise<ApiResponse<OAPLimiterCheck>>
+      oapGetMCPTags: () => Promise<OAPMCPTagsResponse>
       getModelSettings: () => Promise<ModelGroupSetting>
       setModelSettings: (settings: ModelGroupSetting) => Promise<void>
       listenRefresh: (cb: () => void) => () => void
@@ -54,6 +55,8 @@ declare global {
       onReceiveInstallHostDependenciesLog: (callback: (data: string) => void) => () => void
       getInstallHostDependenciesLog: () => Promise<string[]>
       getClientInfo: () => Promise<{ version: string, client_id: string }>
+      listenIPCElicitationRequest: (cb: (data: any) => void) => () => void
+      responsedIPCElicitation: (action: number, content: any) => Promise<void>
       checkCommandExist: (command: string) => Promise<boolean>
       readLocalFile: (filePath: string) => Promise<{ data: Buffer, name: string, mimeType: string }>
       closeWindow: () => void

@@ -53,6 +53,20 @@
       "enableToast": "Chiamate agli strumenti abilitate",
       "enable": "Abilita chiamate agli strumenti"
     },
+    "reAuthorize": {
+      "title": "Errore di autorizzazione durante la chiamata dello strumento",
+      "description": "L'autorizzazione per questo strumento è scaduta o è stata annullata, quindi lo strumento non può essere utilizzato. È richiesta una nuova autorizzazione per ripristinare la funzionalità completa.",
+      "confirm": "Riautorizza",
+      "stopChange": "Autorizzazione in corso, non modificare la configurazione"
+    },
+    "elicitation": {
+      "title": "Input Required",
+      "selectOption": "Select an option",
+      "decline": "Decline",
+      "submit": "Submit",
+      "confirmTitle": "Conferma richiesta",
+      "confirm": "Conferma"
+    },
     "tokens": {
       "tooltip": "Numero di token di input",
       "model": "Model",
@@ -174,6 +188,7 @@
     "argsTitleAlt": "Argomenti",
     "addEnv": "Aggiungi variabile d'ambiente",
     "envTitleAlt": "Variabile d'ambiente",
+    "ignoreVerification": "Ignora verifica SSL/TLS",
     "addHeaders": "Aggiungi Headers",
     "headersTitleAlt": "Headers",
     "toolCallTimeoutAlt": "Predefinito 600 secondi, nessun limite massimo.",
@@ -254,15 +269,17 @@
     "oap": {
       "type": {
         "all": "Tutti gli strumenti",
-        "base": "Mostra solo Base",
-        "pro": "Mostra solo Pro"
+        "base": "Mostra solo OAP_Base",
+        "pro": "Mostra solo OAP_Pro",
+        "official": "Mostra solo Official"
       },
       "sort": {
         "title": "Ordina",
         "popular": "Popolare",
         "new": "Nuovo"
       },
-      "tag": "Tag",
+      "tag": "Categoria",
+      "show_more": "Altro",
       "no_search_data_title": "Nessuno strumento MCP trovato",
       "no_search_data": "Nessun risultato di ricerca trovato, cancella la parola chiave di ricerca o regola le condizioni di filtro.",
       "clear_filter": "Cancella filtro",
@@ -534,4 +551,3 @@
     }
   }
 }
-

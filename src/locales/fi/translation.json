@@ -53,6 +53,20 @@
       "enableToast": "Työkalukutsut käytössä",
       "enable": "Ota työkalukutsut käyttöön"
     },
+    "reAuthorize": {
+      "title": "Valtuutusvirhe työkalua kutsuttaessa",
+      "description": "Tämän työkalun valtuutus on vanhentunut tai peruutettu, joten työkalua ei voi käyttää. Uusi valtuutus vaaditaan täyden toiminnallisuuden palauttamiseksi.",
+      "confirm": "Valtuuta uudelleen",
+      "stopChange": "Valtuutus käynnissä, älä muuta konfiguraatiota"
+    },
+    "elicitation": {
+      "title": "Input Required",
+      "selectOption": "Select an option",
+      "decline": "Decline",
+      "submit": "Submit",
+      "confirmTitle": "Vahvistus vaaditaan",
+      "confirm": "Vahvista"
+    },
     "tokens": {
       "tooltip": "Syöttötokenien määrä",
       "model": "Model",
@@ -174,6 +188,7 @@
     "argsTitleAlt": "Argumentit",
     "addEnv": "Lisää ympäristömuuttuja",
     "envTitleAlt": "Ympäristömuuttuja",
+    "ignoreVerification": "Ohita SSL/TLS-varmennus",
     "addHeaders": "Lisää Headers",
     "headersTitleAlt": "Headers",
     "toolCallTimeoutAlt": "Oletus on 600 sekuntia, ei enimmäisrajaa.",
@@ -254,15 +269,17 @@
     "oap": {
       "type": {
         "all": "Kaikki työkalut",
-        "base": "Näytä vain Base",
-        "pro": "Näytä vain Pro"
+        "base": "Näytä vain OAP_Base",
+        "pro": "Näytä vain OAP_Pro",
+        "official": "Näytä vain Official"
       },
       "sort": {
         "title": "Lajittele",
         "popular": "Suosittu",
         "new": "Uusi"
       },
-      "tag": "Tunniste",
+      "tag": "Kategoria",
+      "show_more": "Lisää",
       "no_search_data_title": "MCP-työkaluja ei löytynyt",
       "no_search_data": "Hakutuloksia ei löytynyt, tyhjennä hakusana tai muuta suodatusehtoja.",
       "clear_filter": "Tyhjennä suodatin",
@@ -538,4 +555,3 @@
     }
   }
 }
-

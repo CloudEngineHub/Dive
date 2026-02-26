@@ -18,6 +18,7 @@
     "deleteSuccess": "Chatt borttagen",
     "deleteFailed": "Borttagning misslyckades",
     "confirmDelete": "Bekräfta borttagning",
+    "confirmDeleteMultiple": "Är du säker på att du vill ta bort {{count}} konversationer?",
     "confirmDeleteDescription": "När den är borttagen kan chatten inte återställas.",
     "tools": {
       "button": "Verktyg",
@@ -95,6 +96,17 @@
       "firstDelayDesc": "Första fördröjning: Tid för AI att börja generera första tecknet",
       "generationRate": "{{time}} tokens per sekund",
       "generationRateDesc": "Genereringshastighet: Antal tokens AI kan generera per sekund"
+    },
+    "commands": {
+      "models": "Open model settings",
+      "settings": "Open system settings",
+      "mcp": "Open MCP tools settings",
+      "model": "Switch model",
+      "selectModel": "Select a model",
+      "noModelsFound": "No models found",
+      "modelChanged": "Switched to {{model}}",
+      "newSession": "Start a new session",
+      "copy": "Copy last response"
     }
   },
   "welcome": {
@@ -354,7 +366,11 @@
     "login": "Logga in",
     "signup": "Registrera dig",
     "save": "Spara",
-    "signout": "Logga ut"
+    "signout": "Logga ut",
+    "searchHistory": "Sök konversationer",
+    "select": "Välj",
+    "selectAll": "Välj alla",
+    "deselectAll": "Avmarkera alla"
   },
   "models": {
     "title": "Modellinställningar",
@@ -522,7 +538,8 @@
       "global_setting-page": "Öppna hantering och inställningar",
       "global_close-window": "Avsluta/Minimera fönster",
       "global_reload": "Ladda om fönster",
-      "global_toggle-search": "Find in Page"
+      "global_toggle-search": "Sök på sidan",
+      "global_search-history": "Öppna sökning i konversationshistorik"
     }
   },
   "update": {
@@ -567,11 +584,22 @@
       "exitFullscreen": "Avsluta helskärm <key>F</key> eller <key>Esc</key>"
     }
   },
+  "historyPage": {
+    "headerTitle": "Konversationshistorik",
+    "inputPlaceholder": "Sök konversationer...",
+    "noHistory": "Ingen konversationshistorik",
+    "noResult": "Inga resultat hittades",
+    "totalRecordsCount": "Totalt {{count}} poster",
+    "searchFound": "Hittade {{count}} poster",
+    "recordsCount": "({{count}} poster)",
+    "selectedRecords": "({{count}} poster valda)"
+  },
   "search": {
-    "placeholder": "Find in page...",
-    "matchCase": "Match Case",
-    "previous": "Previous Match",
-    "next": "Next Match",
-    "noResults": "No results"
+    "placeholder": "Sök i konversationen...",
+    "tooltip": "Sök i konversationen",
+    "matchCase": "Matcha versaler/gemener",
+    "previous": "Föregående träff",
+    "next": "Nästa träff",
+    "noResults": "Inga resultat"
   }
 }

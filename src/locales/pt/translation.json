@@ -18,6 +18,7 @@
     "deleteSuccess": "Conversa excluída",
     "deleteFailed": "Falha ao excluir",
     "confirmDelete": "Confirmar Exclusão",
+    "confirmDeleteMultiple": "Tem certeza de que deseja excluir {{count}} conversas?",
     "confirmDeleteDescription": "Uma vez excluída, a conversa não poderá ser recuperada.",
     "tools": {
       "button": "Ferramentas",
@@ -95,6 +96,17 @@
       "firstDelayDesc": "Primeiro atraso: Tempo para a IA começar a gerar o primeiro caractere",
       "generationRate": "{{time}} tokens por segundo",
       "generationRateDesc": "Taxa de geração: Número de tokens que a IA pode gerar por segundo"
+    },
+    "commands": {
+      "models": "Open model settings",
+      "settings": "Open system settings",
+      "mcp": "Open MCP tools settings",
+      "model": "Switch model",
+      "selectModel": "Select a model",
+      "noModelsFound": "No models found",
+      "modelChanged": "Switched to {{model}}",
+      "newSession": "Start a new session",
+      "copy": "Copy last response"
     }
   },
   "welcome": {
@@ -354,7 +366,11 @@
     "login": "Entrar",
     "signup": "Cadastrar",
     "save": "Salvar",
-    "signout": "Sair"
+    "signout": "Sair",
+    "searchHistory": "Buscar conversas",
+    "select": "Selecionar",
+    "selectAll": "Selecionar tudo",
+    "deselectAll": "Desmarcar tudo"
   },
   "models": {
     "title": "Configurações do Modelo",
@@ -522,7 +538,8 @@
       "global_setting-page": "Abrir gerenciamento e configurações",
       "global_close-window": "Sair/Minimizar Janela",
       "global_reload": "Recarregar Janela",
-      "global_toggle-search": "Find in Page"
+      "global_toggle-search": "Pesquisar na página",
+      "global_search-history": "Abrir pesquisa do histórico de conversas"
     }
   },
   "update": {
@@ -563,11 +580,22 @@
       "exitFullscreen": "Sair da tela cheia<key>F</key>ou<key>Esc</key>"
     }
   },
+  "historyPage": {
+    "headerTitle": "Histórico de conversas",
+    "inputPlaceholder": "Buscar conversas...",
+    "noHistory": "Sem histórico de conversas",
+    "noResult": "Nenhum resultado encontrado",
+    "totalRecordsCount": "{{count}} registros no total",
+    "searchFound": "{{count}} registros encontrados",
+    "recordsCount": "({{count}} registros)",
+    "selectedRecords": "({{count}} registros selecionados)"
+  },
   "search": {
-    "placeholder": "Find in page...",
-    "matchCase": "Match Case",
-    "previous": "Previous Match",
-    "next": "Next Match",
-    "noResults": "No results"
+    "placeholder": "Pesquisar na conversa...",
+    "tooltip": "Pesquisar na conversa",
+    "matchCase": "Diferenciar maiúsculas",
+    "previous": "Correspondência anterior",
+    "next": "Próxima correspondência",
+    "noResults": "Sem resultados"
   }
 }

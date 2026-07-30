@@ -107,6 +107,27 @@ fn create_permission_schema() -> ElicitationSchema {
 
 #[tool_router(router = tool_router_fs, vis = "pub")]
 impl DiveDefaultService {
+    /// Resolve `.` and `..` components without touching the filesystem.
+    ///
+    /// Needed for targets `canonicalize` cannot resolve (a file or directory
+    /// that does not exist yet): an unresolved `..` would otherwise survive
+    /// into the allow-list comparison and step outside the approved directory.
+    fn lexical_normalize(path: &std::path::Path) -> std::path::PathBuf {
+        use std::path::Component;
+
+        let mut normalized = std::path::PathBuf::new();
+        for component in path.components() {
+            match component {
+                Component::CurDir => {}
+                Component::ParentDir => {
+                    normalized.pop();
+                }
+                other => normalized.push(other),
+            }
+        }
+        normalized
+    }
+
     /// Normalize path to absolute path
     fn normalize_path(path: &str) -> String {
         match std::fs::canonicalize(path) {
@@ -119,10 +140,14 @@ impl DiveDefaultService {
                             .join(path_buf.file_name().unwrap_or_default())
                             .to_string_lossy()
                             .to_string(),
-                        Err(_) => path.to_string(),
+                        Err(_) => Self::lexical_normalize(&path_buf)
+                            .to_string_lossy()
+                            .to_string(),
                     }
                 } else {
-                    path.to_string()
+                    Self::lexical_normalize(&path_buf)
+                        .to_string_lossy()
+                        .to_string()
                 }
             }
         }
@@ -138,13 +163,26 @@ impl DiveDefaultService {
     }
 
     /// Check if a path is within allowed directories (without elicitation)
-    fn is_path_allowed(&self, abs_path: &str, allowed_dirs: &[String]) -> bool {
-        for allowed_dir in allowed_dirs.iter() {
-            if abs_path.starts_with(allowed_dir) {
-                return true;
-            }
+    ///
+    /// Matching is component-wise, so approving `/home/user/docs` must not also
+    /// authorize the name-prefixed sibling `/home/user/docs_backup`.
+    fn is_path_allowed(abs_path: &str, allowed_dirs: &[String]) -> bool {
+        use std::path::{Component, Path};
+
+        let path = Path::new(abs_path);
+
+        // Only fully resolved absolute paths can be matched against the
+        // allow-list; anything else is sent back for a fresh prompt.
+        if !path.is_absolute() || path.components().any(|c| c == Component::ParentDir) {
+            return false;
         }
-        false
+
+        allowed_dirs.iter().any(|allowed_dir| {
+            let allowed = Path::new(allowed_dir);
+            // `Path::starts_with` accepts an empty prefix, so an empty or
+            // relative entry in fs.json would otherwise match every path.
+            allowed.is_absolute() && path.starts_with(allowed)
+        })
     }
 
     /// Check path permission with elicitation support (using MCP peer elicitation)
@@ -160,7 +198,7 @@ impl DiveDefaultService {
         // Check if already allowed
         {
             let allowed_dirs = self.allowed_dirs.read().await;
-            if self.is_path_allowed(&abs_path, &allowed_dirs) {
+            if Self::is_path_allowed(&abs_path, &allowed_dirs) {
                 return Ok(());
             }
         }
@@ -260,7 +298,7 @@ impl DiveDefaultService {
         // Check if already allowed
         {
             let allowed_dirs = self.allowed_dirs.read().await;
-            if self.is_path_allowed(&abs_path, &allowed_dirs) {
+            if Self::is_path_allowed(&abs_path, &allowed_dirs) {
                 return Ok(());
             }
         }
@@ -569,4 +607,102 @@ impl DiveDefaultService {
     //         )]))
     //     }
     // }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::DiveDefaultService as Fs;
+
+    fn allowed(path: &str) -> Vec<String> {
+        vec![path.to_string()]
+    }
+
+    #[test]
+    fn allows_the_approved_dir_and_its_descendants() {
+        let dirs = allowed("/home/user/docs");
+
+        assert!(Fs::is_path_allowed("/home/user/docs", &dirs));
+        assert!(Fs::is_path_allowed("/home/user/docs/notes.txt", &dirs));
+        assert!(Fs::is_path_allowed("/home/user/docs/sub/deep/notes.txt", &dirs));
+    }
+
+    #[test]
+    fn rejects_name_prefixed_siblings() {
+        let dirs = allowed("/home/user/docs");
+
+        assert!(!Fs::is_path_allowed("/home/user/docs_backup/secret.key", &dirs));
+        assert!(!Fs::is_path_allowed("/home/user/docs.old/secret.key", &dirs));
+        assert!(!Fs::is_path_allowed("/home/user/docsecret", &dirs));
+        assert!(!Fs::is_path_allowed("/home/user/documents/id_rsa", &dirs));
+    }
+
+    #[test]
+    fn rejects_unrelated_and_parent_paths() {
+        let dirs = allowed("/home/user/docs");
+
+        assert!(!Fs::is_path_allowed("/etc/passwd", &dirs));
+        assert!(!Fs::is_path_allowed("/home/user", &dirs));
+        assert!(!Fs::is_path_allowed("/", &dirs));
+    }
+
+    #[test]
+    fn rejects_traversal_out_of_the_approved_dir() {
+        let dirs = allowed("/home/user/docs");
+
+        assert!(!Fs::is_path_allowed("/home/user/docs/../../../etc/passwd", &dirs));
+        assert!(!Fs::is_path_allowed("/home/user/docs/../ssh/id_rsa", &dirs));
+    }
+
+    #[test]
+    fn rejects_relative_paths() {
+        let dirs = allowed("/home/user/docs");
+
+        assert!(!Fs::is_path_allowed("docs/notes.txt", &dirs));
+        assert!(!Fs::is_path_allowed("", &dirs));
+    }
+
+    #[test]
+    fn ignores_unusable_allow_list_entries() {
+        // A hand-edited or corrupt fs.json must not turn into allow-everything.
+        assert!(!Fs::is_path_allowed("/etc/passwd", &allowed("")));
+        assert!(!Fs::is_path_allowed("/etc/passwd", &allowed("docs")));
+        assert!(!Fs::is_path_allowed("/etc/passwd", &[]));
+    }
+
+    #[test]
+    fn matches_any_entry_in_a_multi_dir_allow_list() {
+        let dirs = vec![
+            "/home/user/docs".to_string(),
+            "/srv/shared".to_string(),
+        ];
+
+        assert!(Fs::is_path_allowed("/srv/shared/report.pdf", &dirs));
+        assert!(!Fs::is_path_allowed("/srv/shared_private/report.pdf", &dirs));
+    }
+
+    #[test]
+    fn lexical_normalize_resolves_dot_components() {
+        let normalize = |p: &str| {
+            Fs::lexical_normalize(std::path::Path::new(p))
+                .to_string_lossy()
+                .to_string()
+        };
+
+        assert_eq!(normalize("/home/user/docs/./notes.txt"), "/home/user/docs/notes.txt");
+        assert_eq!(normalize("/home/user/docs/../../etc/passwd"), "/home/etc/passwd");
+        assert_eq!(normalize("/home/user/docs/.."), "/home/user");
+        // Never climbs above the root.
+        assert_eq!(normalize("/../../etc"), "/etc");
+    }
+
+    #[test]
+    fn normalized_traversal_cannot_reach_a_sibling_dir() {
+        // `create_dir_all` accepts targets whose parents do not exist yet, so
+        // such paths reach the gate via the lexical fallback rather than
+        // `canonicalize`. They must still be confined.
+        let dirs = allowed("/home/user/docs");
+        let escaped = Fs::normalize_path("/home/user/docs/../docs_backup/new/dir");
+
+        assert!(!Fs::is_path_allowed(&escaped, &dirs));
+    }
 }

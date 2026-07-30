@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: windows-latest
+          - os: windows-2022
             platform: windows
             arch: x64
           - os: macos-latest
@@ -194,12 +194,12 @@ jobs:
             config: ''
             os_name: 'linux-x64'
             mcp_bin_name: 'dive-mcp'
-          - platform: 'windows-latest'
+          - platform: 'windows-2022'
             args: ''
             config: ''
             os_name: 'windows-x64'
             mcp_bin_name: 'dive-mcp.exe'
-          # - platform: 'windows-latest'
+          # - platform: 'windows-2022'
           #   args: '--config src-tauri/tauri.microsoftstore.conf.json'
           #   config: 'microsoftstore'
           #   os_name: 'windows-x64'

@@ -6,6 +6,8 @@ import remarkGfm from "remark-gfm"
 import remarkMath from "remark-math"
 import rehypeKatex from "rehype-katex"
 import rehypeRaw from "rehype-raw"
+import rehypeSanitize from "rehype-sanitize"
+import { messageSanitizeSchema } from "../../helper/messageSanitizeSchema"
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter"
 import { tomorrow, oneLight } from "react-syntax-highlighter/dist/esm/styles/prism"
 import { useAtom, useAtomValue, useSetAtom } from "jotai"
@@ -267,7 +269,7 @@ const Message = ({ messageId, text, isSent, files, isError, isLoading, isRateLim
           singleDollarTextMath: false,
           inlineMathDouble: false
         }], remarkGfm]}
-        rehypePlugins={[rehypeKatex, rehypeRaw]}
+        rehypePlugins={[rehypeRaw, [rehypeSanitize, messageSanitizeSchema], rehypeKatex]}
         remarkRehypeOptions={{
           allowDangerousHtml: true
         }}

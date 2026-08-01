@@ -17,6 +17,8 @@ import InfoTooltip from "../../../../components/InfoTooltip"
 import ReactMarkdown from "react-markdown"
 import rehypeRaw from "rehype-raw"
 import rehypeKatex from "rehype-katex"
+import rehypeSanitize from "rehype-sanitize"
+import { messageSanitizeSchema } from "../../../../helper/messageSanitizeSchema"
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter"
 import { tomorrow, oneLight } from "react-syntax-highlighter/dist/esm/styles/prism"
 import { themeAtom } from "../../../../atoms/themeState"
@@ -566,7 +568,7 @@ const OAPServerList = ({
                                     className="oap-content-title-tooltip"
                                     content={<ReactMarkdown
                                       remarkPlugins={[remarkGfm]}
-                                      rehypePlugins={[rehypeKatex, rehypeRaw]}
+                                      rehypePlugins={[rehypeRaw, [rehypeSanitize, messageSanitizeSchema], rehypeKatex]}
                                       components={{
                                         code({node, className, children, ...props}) {
                                           const match = /language-(\w+)/.exec(className || "")

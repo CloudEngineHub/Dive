@@ -133,6 +133,7 @@
     "react-textarea-autosize": "^8.5.9",
     "rehype-katex": "^7.0.1",
     "rehype-raw": "^7.0.0",
+    "rehype-sanitize": "^6.0.0",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
     "rimraf": "^6.0.1",
